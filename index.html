@@ -64,7 +64,7 @@
   display: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .navbar a:not(:first-child) {display: none;}
   .navbar a.icon {
     float: left;
@@ -72,7 +72,7 @@
   }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 700px){
   .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
     position: absolute;
@@ -417,47 +417,39 @@
  margin-left:30px;
 }
 
-@media screen and (min-width: 300px) and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .card, .column, .cloud{
-    width: 100%;
-    height: auto;
-    position: relative;
+    column-count:1;
+	  column-gap:50px;
   }
 }
 
-@media (min-width: 300px) and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .award img {
-    float: right;
+    float: left; 
+    left:0;
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 1300px) {
-  .publi{
-    width:100%;
-  }
-}
-
-@media screen and (min-width: 300px) and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .work{
     column-count:2;
     min-height: 300px;
     height: 100%;
-    column-gap:50px;
+    column-gap:80px;
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .para{
    column-count:1;
    column-gap:50px;
 }
 }
 
-@media screen and (min-width: 300px) and (max-width: 1300px){
+@media screen and (max-width: 1000px){
   .con {
-    text-align: center;
     height:200%;
-    width:150%;
   }
 }
 
