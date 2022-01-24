@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 	<title>SUBINA KHANAL</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,16 +9,20 @@
 </head>
 <style type="text/css">
  *{
-     margin: 0px;
-     padding: 0px;
-     box-sizing: border-box;
-}
+     		 margin: 0px;
+      		padding: 0px;
+      		box-sizing: border-box;
+		
+     }
 
-body{
+     body{
  	background-color:#DCEDC8;
- }
+ 	
+}
+	
 
-.navbar{
+ 
+ .navbar{
        list-style-type: none;
        float:left;
        margin: 0;
@@ -29,16 +32,17 @@ body{
        position: fixed;
        height: 100%;
        overflow: auto;
-    }
+    
+        }
 
-.navbar a{
+    .navbar a{
       display: block;
       color:black;
       padding: 16px;
       text-decoration: none;
       font-size: 20px;
       font-family:Verdana;
-}
+	}
 
 .navbar a.active {
   background-color: #04AA6D;
@@ -116,8 +120,6 @@ body{
 .con{
         background-color:#FFFDE7;
 	color:black;
-        padding-right:30px;
-	padding-left: 30px;
 	
 	}
 
@@ -133,8 +135,6 @@ body{
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  padding: 16px;
-  text-align: center;
   width: 70%;
   background-color:#F0FFF0;
 }
@@ -143,44 +143,22 @@ body{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.cont {
+  padding: 2px 16px;
+  height:150px;
+}
+
 .column {
   float: left;
   width: 50%;
   padding: 50px;
 }
 
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
-
-.cloud {
-  height: 30px;
-  width: 300px;
-  background:#EF9A9A;
-  border-radius: 30px;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 1300px) {
-  .column{
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Responsive columns */
-@media screen and (max-width: 1300px) {
-  .cloud{
-    width: 100%;
-    height:100%;
-  }
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -381,7 +359,6 @@ body{
   float: left;
   width: 25%;
   padding: 10px;
-  padding-left:20px;
 }
 
 /* Clear floats after the columns */
@@ -431,6 +408,14 @@ body{
   opacity: 1;
 }
 
+.cloud {
+  height: 30px;
+  width: 300px;
+  background:#EF9A9A;
+  border-radius: 30px;
+ 
+}
+
 .slider{
   height:200px;
   width: 400px;
@@ -452,7 +437,17 @@ body{
  margin-left:30px;
 }
 
-
+@media screen and (max-width: 1300px) {
+  .card, .column, .cloud{
+    width: 78%;
+    height: 50%;
+    position: relative;
+}
+	
+.column{
+    padding-left:200px;
+}
+}
 @media screen and (max-width: 600px) {
       .workcolumn {
          width: 100%;
@@ -559,7 +554,6 @@ function myFunction() {
 <br><br>
 
 <center><h3> Worked with: </h3>
-<hr  width="230">
 <hr  width="230"></center>
 <br><br>
 <div class="workrow">
@@ -578,7 +572,7 @@ function myFunction() {
         <span class="tooltiptext">PYTHON</span>
   </div>
    <div class="tooltip">
-	<img src="php.png" style="width:60px;">
+	<img src="php.png" style="width:50px;">
         <span class="tooltiptext">PHP</span>
    </div>
 </div>
@@ -602,7 +596,7 @@ function myFunction() {
 <div class="workcolumn">   
   <h3 style="color:#1A237E;"> ML Frameworks</h3><br>
  <div class="tooltip">
-        <img src="tensorflow.jfif" style="width:50px;">
+        <img src="tensorflow.jfif" style="width:90px;padding-left:40px;">
 	 <span class="tooltiptext">TENSORFLOW</span>
   </div>
  <div class="tooltip">
@@ -638,12 +632,15 @@ function myFunction() {
 <br>
 <div class="card">
   <center><img src="khu.png" style="width:50%"></center><br>
+  <div class="cont">
     <h4><b>Computer Science and Engineering</b></h4> 
-     <p> 2020-2022 </p> 
-     <p><a href="icnslab.net">Intelligent-distributed Cloud and Security Lab (ICNS)</a><p>
+	<p> 2020-2022 </p> 
+     <a href="icnslab.net">Intelligent-distributed Cloud and Security Lab (ICNS)</a><br>
      <p> Kyung Hee University (Global Campus), South Korea </p>
-  <br>
-<div class="cloud"><h2>Master's Degree</h2></div>
+  </div>
+<div class="cloud">
+<h2>Master's Degree</h2>
+</div>
 </div>
 </div>
 
@@ -651,13 +648,16 @@ function myFunction() {
 <br>
 <div class="card">
   <center><img src="oic.png" style="width:100%"></center><br><br>
+  <div class="cont">
     <h4><b>Bachelor's degree of Information Management (BIM)</b></h4> 
       <p> 2012-2016 </p> 
-      <p><a href="https://www.oic.edu.np/">Orchid International College</a></p>
-      <p><a href="https://www.tribhuvan-university.edu.np/">Tribhuvan University</a></p>
+      <a href="https://www.oic.edu.np/">Orchid International College</a><br>
+      <a href="https://www.tribhuvan-university.edu.np/">Tribhuvan University</a><br>
      <p> Kathmandu, Nepal </p> 
- <br>
-<div class="cloud"><h2>Bachelor's Degree</h2></div>
+  </div>
+<div class="cloud">
+<h2>Bachelor's Degree</h2>
+</div>
 </div>
 </div>
 </div>
@@ -870,10 +870,10 @@ function myFunction() {
 
 <div class="con" id="contact">
 <br>
-<h4 style="float:left;">E-mail: subinakhanal [at] gmail [dot] com</h4><br>
-<h4 style="float:left;">Phone: +45 91 85 46 80</h4>
-<h4 style="float:right;">Current Address: Myrdalstraede 263, 1, 9220 Aalborg Ost</h4><br>
-<h4 style="float:right;">Permanent Address: Kathmandu, Nepal</h4>
+<h4 style="float:left;padding-left:30px;">E-mail: subinakhanal [at] gmail [dot] com</h4><br>
+<h4 style="float:left;padding-left:30px;">Phone: +45 91 85 46 80</h4>
+<h4 style="float:right;padding-right:30px;">Current Address: Myrdalstraede 263, 1, 9220 Aalborg Ost</h4><br>
+<h4 style="float:right;padding-right:30px;">Permanent Address: Kathmandu, Nepal</h4>
 <br><br><br><br>
 <center>
 <a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin-square" style="font-size:48px;color:#0099CC;"></i></a>
