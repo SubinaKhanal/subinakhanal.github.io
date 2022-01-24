@@ -9,20 +9,16 @@
 </head>
 <style type="text/css">
  *{
-     		 margin: 0px;
-      		padding: 0px;
-      		box-sizing: border-box;
-		
-     }
-
-     body{
- 	background-color:#DCEDC8;
- 	
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
 }
-	
 
- 
- .navbar{
+body{
+ 	background-color:#DCEDC8;
+ }
+
+.navbar{
        list-style-type: none;
        float:left;
        margin: 0;
@@ -32,17 +28,16 @@
        position: fixed;
        height: 100%;
        overflow: auto;
-    
-        }
+    }
 
-    .navbar a{
+.navbar a{
       display: block;
       color:black;
       padding: 16px;
       text-decoration: none;
       font-size: 20px;
       font-family:Verdana;
-	}
+}
 
 .navbar a.active {
   background-color: #04AA6D;
@@ -135,6 +130,8 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  padding: 16px;
+  text-align: center;
   width: 70%;
   background-color:#F0FFF0;
 }
@@ -143,22 +140,44 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.cont {
-  padding: 2px 16px;
-  height:150px;
-}
-
 .column {
   float: left;
   width: 50%;
   padding: 50px;
 }
 
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.cloud {
+  height: 30px;
+  width: 300px;
+  background:#EF9A9A;
+  border-radius: 30px;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+  .column{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+  .cloud{
+    width: 100%;
+    height:100%;
+  }
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -408,14 +427,6 @@
   opacity: 1;
 }
 
-.cloud {
-  height: 30px;
-  width: 300px;
-  background:#EF9A9A;
-  border-radius: 30px;
- 
-}
-
 .slider{
   height:200px;
   width: 400px;
@@ -437,17 +448,7 @@
  margin-left:30px;
 }
 
-@media screen and (max-width: 1300px) {
-  .card, .column, .cloud{
-    width: 78%;
-    height: 50%;
-    position: relative;
-}
-	
-.column{
-    padding-left:200px;
-}
-}
+
 @media screen and (max-width: 600px) {
       .workcolumn {
          width: 100%;
@@ -632,15 +633,12 @@ function myFunction() {
 <br>
 <div class="card">
   <center><img src="khu.png" style="width:50%"></center><br>
-  <div class="cont">
     <h4><b>Computer Science and Engineering</b></h4> 
-	<p> 2020-2022 </p> 
-     <a href="icnslab.net">Intelligent-distributed Cloud and Security Lab (ICNS)</a><br>
+     <p> 2020-2022 </p> 
+     <p><a href="icnslab.net">Intelligent-distributed Cloud and Security Lab (ICNS)</a><p>
      <p> Kyung Hee University (Global Campus), South Korea </p>
-  </div>
-<div class="cloud">
-<h2>Master's Degree</h2>
-</div>
+  <br>
+<div class="cloud"><h2>Master's Degree</h2></div>
 </div>
 </div>
 
@@ -648,16 +646,13 @@ function myFunction() {
 <br>
 <div class="card">
   <center><img src="oic.png" style="width:100%"></center><br><br>
-  <div class="cont">
     <h4><b>Bachelor's degree of Information Management (BIM)</b></h4> 
       <p> 2012-2016 </p> 
-      <a href="https://www.oic.edu.np/">Orchid International College</a><br>
-      <a href="https://www.tribhuvan-university.edu.np/">Tribhuvan University</a><br>
+      <p><a href="https://www.oic.edu.np/">Orchid International College</a></p>
+      <p><a href="https://www.tribhuvan-university.edu.np/">Tribhuvan University</a></p>
      <p> Kathmandu, Nepal </p> 
-  </div>
-<div class="cloud">
-<h2>Bachelor's Degree</h2>
-</div>
+ <br>
+<div class="cloud"><h2>Bachelor's Degree</h2></div>
 </div>
 </div>
 </div>
