@@ -354,9 +354,18 @@
   transform: rotateY(180deg);
 }
 
-.work {
-  column-count:4;
-  margin-left:20px;
+/* Create four equal columns that floats next to each other */
+.workcolumn {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.workrow:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .tooltip {
@@ -439,17 +448,11 @@
     padding-left:200px;
 }
 }
-
-@media screen and (max-width: 1300px) {
-  .work{
-    column-count:2;
-    word-wrap: break-word;
-    height: 100%;
-    padding-left:80px;
-    display:block;
-	  margin-top:15px;
-  }
-}
+@media screen and (max-width: 600px) {
+      .workcolumn {
+         width: 100%;
+      }
+   }
 
 @media screen and (max-width: 1300px) {
   .para{
@@ -553,27 +556,28 @@ function myFunction() {
 <center><h3> Worked with: </h3>
 <hr  width="230"></center>
 <br><br>
-<div class="work">
+<div class="workrow">
+<div class="workcolumn">
  <h3 style="color:#1A237E;"> Programming Languages</h3><br>
   <div class="tooltip">
-	<img src="java.png" style="width:50px;border-radius:50px;">
+	<img src="java.png" style="width:50px;">
        <span class="tooltiptext">JAVA</span>
    </div>
   <div class="tooltip">
-	<img src="dot.png" style="width:50px;border-radius:50px;">
+	<img src="dot.png" style="width:50px;">
          <span class="tooltiptext">.NET</span>
   </div>
   <div class="tooltip">
-	<img src="python.png" style="width:50px;border-radius:50px;">
+	<img src="python.png" style="width:50px;">
         <span class="tooltiptext">PYTHON</span>
   </div>
    <div class="tooltip">
-	<img src="php.jpg" style="width:50px;border-radius:50px;">
+	<img src="php.png" style="width:50px;">
         <span class="tooltiptext">PHP</span>
    </div>
-
- 	<br>
-
+</div>
+ 	
+<div class="workcolumn">
   <h3 style="padding-left:40px;color:#1A237E;"> Tools</h3><br>
   <div class="tooltip">
         <img src="jira.png" style="width:50px;border-radius:50px;">
@@ -587,20 +591,21 @@ function myFunction() {
 	<img src="testrail.png" style="width:50px;border-radius:50px;">
  	<span class="tooltiptext">TESTRAIL</span>
   </div>
- 	<br>
+</div>	
 
-     
+<div class="workcolumn">   
   <h3 style="color:#1A237E;"> ML Frameworks</h3><br>
  <div class="tooltip">
-        <img src="tensorflow.jfif" style="width:90px;padding-left:40px;" class="tensor">
+        <img src="tensorflow.jfif" style="width:90px;padding-left:40px;">
 	 <span class="tooltiptext">TENSORFLOW</span>
   </div>
  <div class="tooltip">
 	<img src="keras.png" style="width:50px;">
  	<span class="tooltiptext">KERAS</span>
   </div>
-<br>
+ </div>
 
+<div class="workcolumn">
  <h3 style="padding-left:30px;color:#1A237E;"> Web Tools</h3><br>
  <div class="tooltip">
      <img src="html.jfif" style="width:50px;border-radius:50px;">
@@ -614,8 +619,7 @@ function myFunction() {
      <img src="sql.jfif" style="width:50px;border-radius:50px;">
      <span class="tooltiptext">SQL</span>
   </div>
-
-<br>
+ </div>
 </div>
 <br><br>
 </div>
