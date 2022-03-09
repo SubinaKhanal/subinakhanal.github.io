@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin: 0; background-color:#f0f8ff;}
+
+.sidebar {
+  margin-left: 10px;
+  padding: 10px 25px;
+  width: 300px;
+  background-color:#E3F2FD;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+div.contents {
+  margin-left: 400px;
+  padding: 1px 16px;
+  height: 750px;
+  overflow: auto;
+  background-color:#E3F2FD;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar button {float: left;}
+  div.contents {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar button {
+    text-align: center;
+    float: none;
+  }
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1976D2;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size:20px;
+  padding: 14px 36px;
+  text-decoration: none;
+}
+
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  background-color: white;
+  border-color: white;
+}
+
+.resumebtn {
+  background-color: #1976D2;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top:40%;
+  width:250px;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 23%;
+  padding: 0 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1px;
+  text-align: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 110px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+ 
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<img src="sk.jpg" width="80%"  style="border-radius:50%;">
+<h1 style="font-family:Segoe Script;"> Subina Khanal </h1> 
+<p><i class="fas fa-angle-double-right"></i> Myrdalstraede 263, 1, 9220 Aalborg Ost</p>
+<p><i class="fas fa-angle-double-right"></i> Phone No.: +4591854680</p>
+<p><i class="fas fa-angle-double-right"></i> subinakhanal [at] gmail [dot] com</p>
+
+<br>
+<button class="button"><a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin-square" style="font-size:40px;color:#0099CC;"></i></a></button>
+<button class="button"><a href="https://www.facebook.com"><i class="fa fa-facebook-square" style="font-size:40px;color:blue;"></i></a></button>
+<button class="button"><a href="https://www.gmail.com"><i class="fa fa-envelope-square" style="font-size:40px;color:red;"></i></a></button>
+<button class="button"><a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fa fa-google" style="font-size:40px;color:#4285F4;"></i></a></button>
+
+<button class="resumebtn"><a href="https://subinakhanal.github.io/Subina.pdf" type="application/pdf" style="color:white;text-decoration:none;"><i class="fa fa-download"></i> RESUME</a></button>
+</div>
+
+<div class="contents">
+ <ul class="topnav">
+  <li><a href="#"><i class="fa fa-fw fa-user"></i> About</a></li>
+  <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+  <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
+  <li><a href="publication.html"><i class="fas fa-book-open"></i> Publications</a></li>
+  <li><a href="award.html"><i class="fas fa-award"></i> Awards</a></li>
+</ul>
+
+<p style="padding:20px;"> I am Subina Khanal, a graduate reseracher in the ICNS laboratory Kyung Hee University, South Korea, under the supervision of
+	Professor Eui-Nam Huh. My current research includes the applied Machine Learning for Proactive Content Caching, Edge Computing, and Federated Learning in particular.
+<br><br>
+	Aside, I enjoy reading books, singing random songs, listening to wonderful music, dancing, and trying out new things; for 
+	now painting. Sometimes, I wander like the fireflies- tiny, but a meaningful creature, write half-done poems. Sometimes, I dive
+         into the trivial mathematical proofs, curious about how things
+	 work, I play around with the concepts, and try my best not to
+	explain myself-in an unconventional way. At least, I feel like
+	that! I celebrate life- calm and simple- and, define myself 
+	with a single success, or a single failure. I enjoy little things in life, and find myself comfortable when closer to nature. I value human behavior, kindness, empathy, compassion, gratitude above anything. 
+	I also firmly believe in equal opportunity to access resources and making decision for both man and woman.
+	
+</p>  
+
+<br>
+<hr style="border-top: 1px solid gray;">
+
+<center><h3 style="font-family:Gabriola;font-size:40px;"> Worked with </h3></center> 
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3 style="background-color:#0097A7;color:white;font-size:25px;height:30px;padding:10px;"><i class="fa fa-file-code"></i> Languages</h3>
+      <div class="tooltip">
+	<img src="java.png" style="width:50px;">
+       <span class="tooltiptext">JAVA</span>
+   </div>
+  <div class="tooltip">
+	<img src="dot.png" style="width:50px;">
+         <span class="tooltiptext">.NET</span>
+  </div>
+  <div class="tooltip">
+	<img src="python.png" style="width:50px;">
+        <span class="tooltiptext">PYTHON</span>
+  </div>
+   <div class="tooltip">
+	<img src="php.png" style="width:60px;">
+        <span class="tooltiptext">PHP</span>
+   </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3 style="background-color:#0097A7;color: white;font-size: 25px;height:30px;padding:10px;"><i class="fa fa-check"></i> Tools</h3>
+      <div class="tooltip">
+        <img src="jira.png" style="width:50px;border-radius:50px;">
+	 <span class="tooltiptext">JIRA</span>
+  </div>
+ <div class="tooltip">
+	<img src="red.png" style="width:50px;border-radius:50px;">
+	 <span class="tooltiptext">RED MINE</span>
+  </div>
+ <div class="tooltip">
+	<img src="testrail.png" style="width:50px;border-radius:50px;">
+ 	<span class="tooltiptext">TESTRAIL</span>
+  </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3 style="background-color:#0097A7;color: white;font-size: 25px;height:30px;padding:10px;"><i class="fa fa-smile-o"></i> ML Frameworks</h3>
+      <div class="tooltip">
+        <img src="tensorflow.jfif" style="width:50px;border-radius:50px;">
+	 <span class="tooltiptext">TENSORFLOW</span>
+  </div>
+ <div class="tooltip">
+	<img src="keras.png" style="width:50px;border-radius:50px;">
+ 	<span class="tooltiptext">KERAS</span>
+  </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3 style="background-color:#0097A7;color:white;font-size: 25px;height:30px;padding:10px;"><i class="fa fa-coffee"></i> Web Tools</h3>
+      <div class="tooltip">
+     <img src="html.jfif" style="width:50px;border-radius:50px;">
+     <span class="tooltiptext">HTML</span>
+  </div>
+ <div class="tooltip">
+     <img src="css.jpg" style="width:60px;border-radius:50px;">
+    <span class="tooltiptext">CSS</span>
+  </div>
+ <div class="tooltip">
+     <img src="sql.jfif" style="width:50px;border-radius:50px;">
+     <span class="tooltiptext">SQL</span>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</body>
+</html>
+

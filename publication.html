@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin: 0; background-color:#f0f8ff;}
+
+.sidebar {
+  margin-left: 10px;
+  padding: 10px 25px;
+  width: 300px;
+  background-color:#E3F2FD;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+
+
+div.contents {
+  margin-left: 400px;
+  padding: 1px 16px;
+  height: 100%;
+  overflow: auto;
+  background-color:#E3F2FD;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar button {float: left;}
+  div.contents {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar button {
+    text-align: center;
+    float: none;
+  }
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1976D2;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size:20px;
+  padding: 14px 36px;
+  text-decoration: none;
+}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+.button {
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.button:hover {
+  background-color: white;
+  border-color: white;
+}
+
+.resumebtn {
+  background-color: #1976D2;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top:40%;
+  width:250px;
+}
+
+.image {
+    width:25%;
+    float:right;
+    margin-top:10%;
+}
+
+.container {
+  border: 1px dotted #283593;
+  background-color: rgb(255,255,255,0.8);
+  border-radius: 5px;
+  padding-left: 10px;
+  margin: 16px 0;
+  width:70%;
+}
+
+.container:hover{
+  background-color: rgb(255,255,255,0.4);
+  color:black;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .image {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+
+.publibutton {
+  border: none;
+  color: white;
+  padding: 7px 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width:60px;
+  border-radius:10%;
+}
+
+.topbtn{
+   font-size:40px; 
+   float:right;
+   background-color:white;
+   width:50px;
+}
+
+.topbtn:hover{
+   background-color:#1976D2;
+   border-color:#1976D2; 
+   color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<img src="sk.jpg" width="80%"  style="border-radius:50%;">
+<h1 style="font-family:Segoe Script;"> Subina Khanal </h1> 
+<p><i class="fas fa-angle-double-right"></i> Myrdalstraede 263, 1, 9220 Aalborg Ost</p>
+<p><i class="fas fa-angle-double-right"></i> +4591854680</p>
+<p><i class="fas fa-angle-double-right"></i> subinakhanal [at] gmail [dot] com</p>
+
+<br>
+<button class="button"><a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin-square" style="font-size:40px;color:#0099CC;"></i></a></button>
+<button class="button"><a href="https://www.facebook.com"><i class="fa fa-facebook-square" style="font-size:40px;color:blue;"></i></a></button>
+<button class="button"><a href="https://www.gmail.com"><i class="fa fa-envelope-square" style="font-size:40px;color:red;"></i></a></button>
+<button class="button"><a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fa fa-google" style="font-size:40px;color:#4285F4;"></i></a></button>
+
+<button class="resumebtn"><a href="https://subinakhanal.github.io/Subina.pdf" type="application/pdf" style="color:white;text-decoration:none;"><i class="fa fa-download"></i> RESUME</a></button>
+</div>
+
+<div class="contents">
+ <ul class="topnav">
+  <li><a href="index.html"><i class="fa fa-fw fa-user"></i> About</a></li>
+  <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+  <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
+  <li><a href="#"><i class="fas fa-book-open"></i> Publications</a></li>
+  <li><a href="award.html"><i class="fas fa-award"></i> Awards</a></li>
+</ul>
+
+<div>
+<a href="https://ieeeaccess.ieee.org/"><img src="ieee.png" class="image"></a>
+<h3> JOURNALS </h3>
+<div class="container"> 
+   <p><a href="#" class="publibutton" style="background-color:hotpink;">J1</a> "Route-based Proactive Content Caching using Self-Attention in Hierarchical Federated Learning."</p>
+   <p style="padding-left:90px;"><b> Subina Khanal</b>, Kyi Thar, and Eui-Nam Huh.</p>
+</div>
+
+<div class="container">
+ <p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9431222" class="publibutton" style="background-color:red;">J2</a>
+  "DCoL: Distributed Collaborative Learning for Proactive Content Caching at Edge Networks."</p>
+  <p style="padding-left:90px;"><b> Subina Khanal</b>, Kyi Thar, and Eui-Nam Huh.</p>
+</div>
+<br>
+<hr style="border-top: 1px solid gray;">
+
+<a href="http://2021.icufn.org/"><img src="icufn.png" class="image"></a>
+	
+<h3>INTERNATIONAL CONFERENCE</h3>
+<div class="container">
+  <p><a href="https://ieeexplore.ieee.org/abstract/document/9528638" class="publibutton" style="background-color:blue;">I1</a>
+  "Proactive Content Caching at Self-Driving Car Using Federated Learning with Edge Cloud."</p>
+  <p style="color:red;padding-left:90px;">"Best Paper Award"</p>
+  <p style="padding-left:90px;"><b> Subina Khanal</b>, Thar, K., Hossain, M. D., & Huh, E. N, 2021, August.</p>
+</div>
+
+<div class="container">
+   <p><a href="https://ieeexplore.ieee.org/abstract/document/9528673" class="publibutton" style="background-color:green;">I2</a> 
+   "Efficient Task Offloading for MEC-Enabled Vehicular Networks: A Non-Cooperative Game Theoretic Approach."</p>
+   <p style="padding-left:90px;">Hossain, Md Delowar, <b> Subina Khanal</b>, and Eui-Nam Huh, 2021, August.</p>
+</div>
+
+<br>
+<hr style="border-top: 1px solid gray;">
+
+<a href="https://www.kiise.or.kr/academy/main/main.fa"><img src="ksc.png" class="image"></a>
+<h3>DOMESTIC CONFERENCE</h3>
+<div class="container">
+  <p> <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10583249" class="publibutton" style="background-color:olive;">D1</a>
+  "Distributed Learning-Based Proactive Content Caching for Improved Quality-of-Experience (QoE).""</p>
+  <p style="color:red;padding-left:90px;">"Excellent Paper Award"</p>
+  <p style="padding-left:90px;"><b> Subina Khanal</b> , and Eui Nam Huh.</p>
+</div>
+
+<div class="container">
+   <p><a href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10529797" class="publibutton" style="background-color:orange;">D2</a> 
+   "Edge-Coordinated On-Device Learning for Personalized Intelligent Digits Recognition."</p>
+   <p style="padding-left:90px;"> Sone, Phoo Pyae, <b> Subina Khanal</b>, and Eui-Nam Huh.</p>
+</div>
+
+<div class="container">
+   <p><a href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE09874656" class="publibutton" style="background-color:purple;">D3</a>
+   "Impact of Segment Duration on the Performance of Adaptive Streaming Algorithms over Mobile Networks."</p>
+   <p style="padding-left:90px;">ur Rahman, W., Lee, S. J.,<b> Subina Khanal</b>, An, Y., & Huh, E. N. (2020).</p>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="topbtn"><i class='fas fa-angle-double-up'></i></button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</div>
+</body>
+</html>
+
