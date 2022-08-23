@@ -183,6 +183,73 @@ ul.topnav li.right {float: right;}
   opacity: 1;
 }
 
+.topbtn{
+   font-size:40px; 
+   float:right;
+   background-color:white;
+   width:50px;
+}
+
+.topbtn:hover{
+   background-color:#1976D2;
+   border-color:#1976D2; 
+   color:white;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Container around content */
+.container {
+  padding: 0px 200px;
+  position: relative;
+  background-color: inherit;
+  width: 27%;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 35%;
+}
+
+/* The actual content */
+.content {
+  padding: 0px 10px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+
+
 </style>
 </head>
 <body>
@@ -313,7 +380,62 @@ ul.topnav li.right {float: right;}
   </div>
 </div>
 
+<br>
+<hr style="border-top: 1px solid gray;">
+
+<center><h3 style="font-family:Gabriola;font-size:40px;"> Awards Received </h3> </center>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <p style="height:auto;width:auto;background-color:#82CAAF;font-size:18px""> BEST PAPER AWARD</p>
+         <li style="font-family:Palatino;list-style-type: circle;">ICUFN 2021</li>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <p style="height:auto;width:auto;background-color:#EF9A9A;font-size:18px"> EXCELLENT STAR AWARD</p>
+      <li style="font-family:Palatino;list-style-type: circle;">Korea Software Congress, KIISE 2021</li>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <p style="height:auto;width:auto;background-color:#FECF6A;font-size:18px"">RISING STAR AWARD</p>
+      <li style="font-family:Palatino;list-style-type: circle;">Tekvortex Pvt.Ltd. 2020</li>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <p style="height:auto;width:auto;background-color:#75C0E0;font-size:18px"">ACADEMIC EXCELLENCE AWARD</p>
+      <li style="font-family:Palatino;list-style-type: circle;">Secured first rank out of 800 students in the university</li>
+    </div>
+  </div>
+  
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="topbtn"><i class='fas fa-angle-double-up'></i></button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 </div>
 </body>
 </html>
-
