@@ -196,59 +196,22 @@ ul.topnav li.right {float: right;}
    color:white;
 }
 
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  margin: 0 auto;
+.chip {
+  display: inline-block;
+  padding: 0px 25px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color:#f0f8ff;
 }
-
-/* Container around content */
-.container {
-  padding: 0px 200px;
-  position: relative;
-  background-color: inherit;
-  width: 27%;
-}
-
-/* Place the container to the left */
-.left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.right {
-  left: 35%;
-}
-
-/* The actual content */
-.content {
-  padding: 0px 10px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-  left: 0px;
-  }
-  
-  /* Full-width containers */
-  .container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-  }
 
   
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
+  @media screen and (max-width: 600px) {
+  .chip {
+    font-size:15px;
   }
-}
-
+ }
 
 </style>
 </head>
@@ -298,9 +261,9 @@ ul.topnav li.right {float: right;}
 </p>  
 
 <br>
-<hr style="border-top: 1px solid gray;">
+<hr style="border-top: 1px dotted black;">
 
-<center><h3 style="font-family:Gabriola;font-size:40px;"> Worked with </h3></center> 
+<center><h3 style="font-family:Gabriola;font-size:40px;"> Worked on </h3></center> 
 <div class="row">
   <div class="column">
     <div class="card">
@@ -380,37 +343,38 @@ ul.topnav li.right {float: right;}
 </div>
 
 <br>
-<hr style="border-top: 1px solid gray;">
+<hr style="border-top: 1px dotted black;">
 
-<center><h3 style="font-family:Gabriola;font-size:40px;"> Awards Received </h3> </center>
+<center><h3 style="font-family:Gabriola;font-size:40px;"> Little Wins </h3> </center>
 
-<div class="timeline">
-  <div class="container left">
-    <div class="content">
-      <p style="height:auto;width:auto;background-color:#82CAAF;font-size:18px""> BEST PAPER AWARD</p>
-         <li style="font-family:Palatino;list-style-type: circle;">ICUFN 2021</li>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <p style="height:auto;width:auto;background-color:#EF9A9A;font-size:18px"> EXCELLENT STAR AWARD</p>
-      <li style="font-family:Palatino;list-style-type: circle;">Korea Software Congress, KIISE 2021</li>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <p style="height:auto;width:auto;background-color:#FECF6A;font-size:18px"">RISING STAR AWARD</p>
-      <li style="font-family:Palatino;list-style-type: circle;">Tekvortex Pvt.Ltd. 2020</li>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <p style="height:auto;width:auto;background-color:#75C0E0;font-size:18px"">ACADEMIC EXCELLENCE AWARD</p>
-      <li style="font-family:Palatino;list-style-type: circle;">Secured first rank out of 800 students in the university</li>
-    </div>
-  </div>
-  
+<div class="row">
+<div class="column">
+<div class="chip" style="background-color:#82CAAF;width:65%">
+  BEST PAPER AWARD
+  <li style="font-family:Palatino;list-style-type: circle;">ICUFN 2021</li>
 </div>
+</div>
+
+<div class="column">
+<div class="chip" style="background-color:#EF9A9A;width:77%">
+EXCELLENT STAR AWARD
+<li style="font-family:Palatino;list-style-type: circle;">KIISE 2021</li>
+</div>
+</div>
+<div class="column">
+<div class="chip" style="background-color:#FECF6A;width:70%">
+  RISING STAR AWARD
+   <li style="font-family:Palatino;list-style-type: circle;">Tekvortex Pvt.Ltd. 2020</li>
+</div>
+</div>
+<div class="column">
+<div class="chip" style="background-color:#75C0E0;width:90%">
+  ACADEMIC EXCELLENCE
+  <li style="font-family:Palatino;list-style-type: circle;">Secured first rank in the university</li>
+</div>
+</div>
+</div>
+
 
 <button onclick="topFunction()" id="myBtn" title="Go to top" class="topbtn"><i class='fas fa-angle-double-up'></i></button>
 <script>
