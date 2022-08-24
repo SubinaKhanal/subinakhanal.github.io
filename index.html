@@ -112,6 +112,13 @@ ul.topnav li.right {float: right;}
   width: 23%;
   padding: 0 10px;	
 }
+	
+/* Float four columns side by side */
+.columns {
+  float: left;
+  width: 23%;
+  padding: 0 10px;	
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -135,6 +142,18 @@ ul.topnav li.right {float: right;}
 
 @media screen and (max-width: 700px) {
   .column {
+    width: 90%;
+    display: block;
+    margin-bottom: 10px;
+    margin-left:20px;
+    height:auto;
+  }
+
+}
+
+
+@media screen and (max-width: 700px) {
+  .columns {
     width: 90%;
     display: block;
     margin-bottom: 10px;
@@ -370,26 +389,26 @@ ul.topnav li.right {float: right;}
 <center><h3 style="font-family:Gabriola;font-size:40px;"> Little Wins </h3> </center>
 
 <div class="row">
-<div class="column">
+<div class="columns">
 <div class="chip" style="background-color:#82CAAF;width:65%">
   BEST PAPER AWARD
   <li style="font-family:Palatino;list-style-type: circle;">ICUFN 2021</li>
 </div>
 </div>
 
-<div class="column">
+<div class="columns">
 <div class="chip" style="background-color:#EF9A9A;width:77%">
 EXCELLENT STAR AWARD
 <li style="font-family:Palatino;list-style-type: circle;">KIISE 2021</li>
 </div>
 </div>
-<div class="column">
+<div class="columns">
 <div class="chip" style="background-color:#FECF6A;width:70%">
   RISING STAR AWARD
    <li style="font-family:Palatino;list-style-type: circle;">Tekvortex Pvt.Ltd. 2020</li>
 </div>
 </div>
-<div class="column">
+<div class="columns">
 <div class="chip" style="background-color:#75C0E0;width:90%">
   ACADEMIC EXCELLENCE
   <li style="font-family:Palatino;list-style-type: circle;">Secured first rank in the university</li>
