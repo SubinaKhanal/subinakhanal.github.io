@@ -19,6 +19,8 @@ body {
   position: fixed;
   height: 100%;
   overflow: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 /* Contents section */
@@ -159,6 +161,26 @@ ul.topnav li.right { float: right; }
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Scroll to Top Button */
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden by default */
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scrollToTop:hover {
+  background-color: #0f4c9d;
+}
+
 /* Responsive timeline */
 @media screen and (max-width: 600px) {
   .timeline::after {
@@ -195,14 +217,13 @@ ul.topnav li.right { float: right; }
     <!-- Sidebar content -->
     <img src="sk.jpg" width="80%" style="border-radius:50%;">
     <h1>Subina Khanal</h1> 
-    <p><i class="fas fa-angle-double-right"></i> AALBORG EAST, DENMARK</p>
-    <p><i class="fas fa-angle-double-right"></i> subinakhanal [at] gmail [dot] com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Aalborg East, Denmark</p>
+    <p><i class="fas fa-envelope"></i> subinakhanal [at] gmail [dot] com</p>
     
     <!-- Social icons -->
     <br>
     <button class="button"><a href="https://www.linkedin.com/in/subinakhanal/"><i class="fab fa-linkedin" style="font-size:40px;color:#0099CC;"></i></a></button>
     <button class="button"><a href="https://www.facebook.com"><i class="fab fa-facebook-square" style="font-size:40px;color:blue;"></i></a></button>
-    <button class="button"><a href="https://www.gmail.com"><i class="fas fa-envelope" style="font-size:40px;color:red;"></i></a></button>
     <button class="button"><a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fab fa-google" style="font-size:40px;color:#4285F4;"></i></a></button>
     
     <button class="resumebtn" type="submit" onclick="window.open('https://subinakhanal.github.io/Subina.pdf')"><i class="fa fa-download"></i> RESUME</button>
@@ -247,12 +268,34 @@ ul.topnav li.right { float: right; }
     <div class="container right">
       <div class="content">
         <h2>2017 - 2018</h2>
-        <p><a href="https://www.linkedin.com/company/mdev-solutions" style="color:#800000;"><b>mDev Tech Solutions Pvt. Ltd.</b></a></p>
-        <p>QA Engineer</p>
+        <p><a href="http://sarv.com/" style="color:#5C4033;"><b>Sarv Technologies</b></a></p>
+        <p>Software Tester</p>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Scroll to Top Button -->
+<button class="scrollToTop" id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+
+<script>
+// Scroll to Top functionality
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show or hide the button based on scroll position
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 
 </body>
 </html>
