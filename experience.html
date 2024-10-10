@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,28 +27,28 @@
             height: 100%;
             overflow-y: auto;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            animation: slideInLeft 1s ease-out; /* Slide in animation */
+            animation: slideInLeft 1s ease-out;
         }
 
         .sidebar img {
             width: 100%;
             border-radius: 50%;
             opacity: 0;
-            animation: fadeIn 1s ease-in 0.5s forwards; /* Image fade-in animation */
+            animation: fadeIn 1s ease-in 0.5s forwards;
         }
 
         .sidebar h1 {
             font-family: 'Segoe Script', cursive;
             color: #1976d2;
             opacity: 0;
-            animation: fadeIn 1s ease-in 0.8s forwards; /* Text fade-in */
+            animation: fadeIn 1s ease-in 0.8s forwards;
         }
 
         .sidebar p {
             font-size: 14px;
             margin: 10px 0;
             opacity: 0;
-            animation: fadeIn 1s ease-in 1s forwards; /* Text fade-in */
+            animation: fadeIn 1s ease-in 1s forwards;
         }
 
         .sidebar a {
@@ -60,7 +61,7 @@
             border: none;
             margin-right: 10px;
             opacity: 0;
-            animation: fadeIn 1s ease-in 1.2s forwards; /* Button fade-in */
+            animation: fadeIn 1s ease-in 1.2s forwards;
         }
 
         .sidebar .social-links i {
@@ -70,7 +71,7 @@
         }
 
         .sidebar .social-links i:hover {
-            transform: scale(1.2); /* Hover animation for icons */
+            transform: scale(1.2);
         }
 
         .resumebtn {
@@ -83,14 +84,14 @@
             margin-top: 20px;
             cursor: pointer;
             text-align: center;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Button hover effect */
+            transition: background-color 0.3s ease, transform 0.3s ease;
             opacity: 0;
-            animation: fadeIn 1s ease-in 1.4s forwards; /* Button fade-in */
+            animation: fadeIn 1s ease-in 1.4s forwards;
         }
 
         .resumebtn:hover {
             background-color: #0d47a1;
-            transform: translateY(-3px); /* Lift up on hover */
+            transform: translateY(-3px);
         }
 
         /* Top Navigation */
@@ -106,6 +107,7 @@
 
         .topnav li {
             float: left;
+            margin: 0 20px;
         }
 
         .topnav li a {
@@ -115,7 +117,7 @@
             padding: 16px;
             text-decoration: none;
             font-size: 18px;
-            transition: background-color 0.3s ease; /* Hover animation for nav */
+            transition: background-color 0.3s ease;
         }
 
         .topnav li a:hover {
@@ -128,6 +130,24 @@
             padding: 20px;
             background-color: #e3f2fd;
             height: 100%;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #1976d2;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         .timeline {
@@ -153,8 +173,8 @@
             background-color: inherit;
             width: 50%;
             opacity: 0;
-            transform: translateY(30px); /* Initial position for animation */
-            transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
         .container.left {
@@ -240,7 +260,7 @@
             border: none;
             cursor: pointer;
             display: none;
-            transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth animations */
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         .topbtn:hover {
@@ -271,10 +291,11 @@
         /* Scroll-triggered animation */
         .container.reveal {
             opacity: 1;
-            transform: translateY(0); /* Reveal animation when in view */
+            transform: translateY(0);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Sidebar -->
@@ -295,122 +316,84 @@
     </div>
 
     <!-- Main Content -->
+    <div class="contents">
+        <!-- Navigation -->
+        <ul class="topnav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
 
-<div class="contents">
- <ul class="topnav">
-  <li><a href="index.html"><i class="fa fa-fw fa-user"></i> About</a></li>
-  <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
-  <li><a href="#"><i class="fas fa-laptop"></i> Experience</a></li>
-  <li><a href="publication.html"><i class="fas fa-book-open"></i> Publications</a></li>
-</ul>
-<br>
-<div class="timeline" id="experience">
-<div class="container left">
-    <div class="content">
-       <h2>2022</h2>
-      <p><a href="https://www.cs.aau.dk/" style="color:blue;"><b>AALBORG UNIVERSITY</b></a></p>
-      <p>Technical Faculty of IT and Design (Department of Computer Science)</p>
-	<dl>
-	<dt> Research Assistant (RA) </dt>
-	</dl>
+        <!-- About Section -->
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am Subina Khanal, an enthusiastic and highly motivated student passionate about software development and technology.</p>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: Python, JavaScript, C++</li>
+                <li>Web Development: HTML, CSS, React.js</li>
+                <li>Database Management: MySQL, MongoDB</li>
+            </ul>
+        </div>
+
+        <!-- Projects Section -->
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><b>Portfolio Website:</b> A personal website showcasing my skills and projects.</li>
+                <li><b>Data Analysis with Python:</b> Analyzed and visualized datasets using Pandas and Matplotlib.</li>
+                <li><b>JavaScript ToDo App:</b> Developed a ToDo list application with full CRUD operations.</li>
+            </ul>
+        </div>
+
+        <!-- Education Section -->
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <p>Master's in Computer Science - Aalborg University</p>
+            <p>Bachelor's in Information Technology - Tribhuvan University</p>
+        </div>
+
+        <!-- Scroll to top button -->
+        <button class="topbtn" onclick="topFunction()" id="topBtn"><i class="fas fa-arrow-up"></i></button>
     </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-       <h2>2020 - 2022</h2>
-      <p><a href="http://icnslab.net/" style="color:red;"><b>ICNS LAB, KYUNG HEE UNIVERSITY</b></a></p>
-	<dl>
-	<dt> Graduate Researcher </dt>
-	<dd>o  Applied Machine Learning</dd>
-	</dl>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-       <h2> 2018 - 2019</h2>
-      <p><a href="https://tekvortex.com/" style="color:#800000;"><b>Tekvortex Pvt. Ltd.</b></a></p>
-     <p>Quality Assurance Engineer (QA) on a data archiving platform for Smarsh Inc.</p>
-	<dl>
-	<dt>Job Specification:</dt>
-		 <dd> o Manual Testing</dd>
-		 <dd>o Functional and Non-Functional Testing</dd>
-		 <dd>o Integration Testing and System Testing</dd>
- 		 <dd>o Issue Analysis and Replication: Regression Testing</dd>
-		 <dd>o Managing Test Cases and Test Runs using TestRail</dd>
-		 <dd>o Project Documentation and Communication</dd>
 
-	</dl>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2017 - 2018</h2>
-      <p><a href="https://www.linkedin.com/company/mdev-solutions" style="color:#800000;"><b>mDev Tech Solutions Pvt. Ltd.</b></a></p>
-      <p>Junior Quality Assurance Engineer (QA)</p>
-      <dl>
-	<dt>Job Specification:</dt>
-		 <dd>o Manual Testing</dd>
-		 <dd>o Functional Testing and Integration Testing</dd>
-		 <dd>o Defect Tracking and System Testing</dd>
- 		 <dd>o Web Application Testing</dd>
-		 <dd>o API Testing</dd>
-		 <dd>o Writing and Execution of Manual Test Cases</dd>
-		<dd>o Preparation of appropriate and accurate documentation at all levels of quality spectrum</dd><br>
- 	 <dt>Projects:</dt>
-  		<dd>o ICA (International Center for Academic College of Distance Education \& Online Studies) website</dd>
-		<dd>o DPAY</dd>
-		<dd>o Easy Inventory Management</dd>
-		<dd>o MBM Gateway Project</dd>
-  	
-	</dl>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-       <h2>April-May 2017</h2>
-      <p><a href="https://www.linkedin.com/company/mdev-solutions" style="color:#2E8B57;"><b>mDev Tech Solutions Pvt. Ltd.</b></a></p>
-	<dl>
-	<dt> Intern </dt>
-	<dd>o  Quality Assurance Training</dd>
-	</dl>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>April-June 2016</h2>
-       <p><a href="http://www.planetearthsolution.com/" style="color:#2E8B57;"><b>Planet Earth Solution Pvt. Ltd.</b></a></p>
-	<dl>
-	<dt> Intern </dt>
-	<dd>o  Web Development using .Net</dd>
-	</dl>
-    </div>
-  </div>
-</div>
+    <!-- JavaScript for Scroll-to-top button -->
+    <script>
+        // Scroll to top button
+        window.onscroll = function () { scrollFunction() };
 
+        function scrollFunction() {
+            var topBtn = document.getElementById("topBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="topbtn"><i class='fas fa-angle-double-up'></i></button>
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-</div>
+        // Scroll reveal effect
+        window.addEventListener("scroll", function () {
+            var containers = document.querySelectorAll(".container");
+            containers.forEach(function (container) {
+                var windowHeight = window.innerHeight;
+                var elementTop = container.getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    container.classList.add("reveal");
+                }
+            });
+        });
+    </script>
 </body>
-</html>
 
+</html>
