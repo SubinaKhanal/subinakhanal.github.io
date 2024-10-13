@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* CSS Styles */
         * {
@@ -141,24 +142,53 @@
             width: 100%;
         }
 
-        /* About Section Styles */
-        .about-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        /* Card Styles for Education Section */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 20px auto; /* Added margin for spacing */
+            text-align: center;
+            font-family: Arial;
+            border-radius: 5px; /* Added border-radius */
+            background: #fff; /* Background color for card */
         }
 
-        .about-item {
-            padding: 10px;
-            background: #E1F5FE;
-            border-left: 4px solid #0288D1;
-            border-radius: 5px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.5s forwards;
+        .card img {
+            width: 100%; /* Responsive image */
+            border-top-left-radius: 5px; /* Rounded top corners */
+            border-top-right-radius: 5px; /* Rounded top corners */
         }
 
-        /* Experience Section Styles */
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* Timeline and Little Wins Section Styles */
         .timeline {
             position: relative;
             max-width: 1200px;
@@ -286,63 +316,16 @@
         /* Adding a bounce-in effect after the fade-in */
         @keyframes bounceIn {
             0% {
-                transform: scale(0.9);
+                transform: scale(0.5);
+                opacity: 0;
             }
             50% {
                 transform: scale(1.1);
+                opacity: 1;
             }
             100% {
                 transform: scale(1);
             }
-        }
-
-        /* Fade-in animation from earlier */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* Education Section Styles */
-        .education-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            position: relative;
-        }
-
-        .education-item {
-            padding: 10px;
-            background: #E8F5E9;
-            border-left: 4px solid #388E3C;
-            border-radius: 5px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.5s forwards;
-        }
-
-        /* Academic Projects Section Styles */
-        .projects-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            position: relative;
-        }
-
-        .project-item {
-            padding: 10px;
-            background: #FFF3E0;
-            border-left: 4px solid #FF9800;
-            border-radius: 5px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.5s forwards;
-        }
-
-        /* Footer Styles */
-        footer {
-            margin-top: auto;
         }
 
         /* Scroll to Top Button */
@@ -464,12 +447,34 @@
         <section id="education">
             <h2>Education</h2>
             <div class="education-container">
-                <div class="education-item">Bachelor of Science in Computer Science, University Name, Year</div>
-                <div class="education-item">Master of Science in Data Science, University Name, Year</div>
+                <div class="card">
+                    <img src="path_to_university_image.jpg" alt="University" />
+                    <h1>Bachelor of Science in Computer Science</h1>
+                    <p class="title">University Name</p>
+                    <p>Year of Graduation</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+                <div class="card">
+                    <img src="path_to_university_image.jpg" alt="University" />
+                    <h1>Master of Science in Data Science</h1>
+                    <p class="title">University Name</p>
+                    <p>Year of Graduation</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
             </div>
-        </section>
 
-        <section id="projects">
             <h2>Academic Projects</h2>
             <div class="projects-container">
                 <div class="project-item">Project Title 1: Description of project and its significance.</div>
