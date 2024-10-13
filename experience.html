@@ -233,6 +233,23 @@
             background: #E7F0F8; /* Light Blue */
         }
 
+        /* Little Wins Section Styles */
+        .little-wins-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .little-win-item {
+            padding: 15px;
+            background: #E0F7FA; /* Light Cyan Background */
+            border-left: 4px solid #00ACC1; /* Dark Cyan */
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
         /* Animation */
         @keyframes fadeInUp {
             to {
@@ -280,28 +297,23 @@
             <a href="https://github.com" target="_blank">GitHub</a>
             <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
-        <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a> <!-- Replace with your resume link -->
+        <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a>
     </div>
 
     <!-- Top Navigation Bar -->
     <header>
         <nav class="horizontal-nav">
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#publications">Publications</a></li>
+                <li><a href="#little-wins">Little Wins</a></li> <!-- Link to the new section -->
             </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
     <div class="content">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Write a short introduction about yourself, your background, and your interests.</p>
-        </section>
-
         <section id="education">
             <h2>Education</h2>
             <div class="education-container">
@@ -360,6 +372,22 @@
                 </a>
             </div>
             <!-- Add more publications as needed -->
+        </section>
+
+        <section id="little-wins">
+            <h2>Little Wins</h2>
+            <div class="little-wins-container">
+                <div class="little-win-item">
+                    <strong>Award Title 1</strong> - Brief description of the award.
+                </div>
+                <div class="little-win-item">
+                    <strong>Award Title 2</strong> - Brief description of the award.
+                </div>
+                <div class="little-win-item">
+                    <strong>Award Title 3</strong> - Brief description of the award.
+                </div>
+                <!-- Add more awards as needed -->
+            </div>
         </section>
     </div>
 
