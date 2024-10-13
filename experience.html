@@ -254,11 +254,14 @@
             padding: 10px;
             background: #E0F7FA;
             border-left: 4px solid #00ACC1;
-            border-radius: 5px;
+            border-radius: 25px; /* Updated for chip style */
             opacity: 0;
             transform: translateY(20px) scale(0.95);
             animation: fadeInUp 0.5s forwards, bounceIn 0.7s ease-out forwards;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block; /* Added for inline display */
+            font-size: 16px; /* Font size for chip */
+            line-height: 50px; /* Line height for vertical centering */
         }
 
         /* Staggering animation delay for each little win */
@@ -322,34 +325,35 @@
             .side-nav {
                 width: 100%;
                 height: auto;
-                position: relative;
-            }
-
-            .side-nav img {
-                width: 60px;
-            }
-
-            header {
-                margin-left: 0;
             }
 
             .content {
                 margin-left: 0;
-                padding: 10px;
             }
 
-            section {
-                margin: 5px;
+            nav.horizontal-nav {
+                display: block;
             }
 
-            .timeline-item {
-                padding: 10px;
+            nav.horizontal-nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav.horizontal-nav ul li {
+                margin: 5px 0;
+            }
+
+            .little-win-item {
+                font-size: 14px; /* Adjust font size for smaller screens */
             }
         }
     </style>
 </head>
 
 <body>
+
     <!-- Side Navigation Bar -->
     <div class="side-nav">
         <img src="your-profile-picture.jpg" alt="Your Profile Picture">
@@ -380,24 +384,9 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="about-container">
-                <div class="about-item">
-                    Hello! I am a passionate software developer with a keen interest in building innovative applications. My journey began in [Year/Context], and since then, I have been dedicated to enhancing my skills in various programming languages and technologies.
-                </div>
-                <div class="about-item">
-                    I enjoy working on collaborative projects, and I love learning new technologies that help me grow as a developer. In my spare time, I also engage in [Hobbies/Interests], which helps me maintain a well-rounded approach to my work and life.
-                </div>
-                <div class="about-item">
-                    My goal is to continuously improve and make meaningful contributions to the tech community. I believe in the power of technology to solve real-world problems and am excited about the possibilities that lie ahead.
-                </div>
-            </div>
-        </section>
-
-        <section id="little-wins">
-            <h2>Little Wins</h2>
-            <div class="little-wins-container">
-                <div class="little-win-item">First Little Win: Completed an important task!</div>
-                <div class="little-win-item">Second Little Win: Solved a tricky bug today!</div>
-                <div class="little-win-item">Third Little Win: Received positive feedback from a client!</div>
+                <div class="about-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="about-item">Vestibulum viverra nisi at nisl euismod suscipit.</div>
+                <div class="about-item">Duis sit amet ante sed dolor facilisis fermentum.</div>
             </div>
         </section>
 
@@ -416,6 +405,15 @@
                         <p>Description of your role and responsibilities at Job Title 2.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="little-wins">
+            <h2>Little Wins</h2>
+            <div class="little-wins-container">
+                <div class="little-win-item">First Little Win: Completed an important task!</div>
+                <div class="little-win-item">Second Little Win: Solved a tricky bug today!</div>
+                <div class="little-win-item">Third Little Win: Received positive feedback from a client!</div>
             </div>
         </section>
     </div>
