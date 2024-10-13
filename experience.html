@@ -161,15 +161,15 @@
         /* Experience Section Styles */
         .timeline {
             position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 800px; /* Adjusted width for better layout */
+            margin: 0 auto; /* Center the timeline */
         }
 
         .timeline::after {
             content: '';
             position: absolute;
             width: 6px;
-            background-color: white;
+            background-color: #4B6EAF; /* Soft Blue */
             top: 0;
             bottom: 0;
             left: 50%;
@@ -177,23 +177,10 @@
         }
 
         .container {
-            padding: 10px 40px;
+            padding: 10px 20px; /* Added padding for better spacing */
             position: relative;
-            background-color: inherit;
             width: 50%;
-        }
-
-        .container::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background-color: white;
-            border: 4px solid #FF9F55;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
+            margin-bottom: 20px; /* Space between timeline items */
         }
 
         .left {
@@ -211,7 +198,7 @@
             top: 22px;
             width: 0;
             z-index: 1;
-            right: 30px;
+            right: 30px; /* Adjusted for better alignment */
             border: medium solid white;
             border-width: 10px 0 10px 10px;
             border-color: transparent transparent transparent white;
@@ -224,21 +211,27 @@
             top: 22px;
             width: 0;
             z-index: 1;
-            left: 30px;
+            left: 30px; /* Adjusted for better alignment */
             border: medium solid white;
             border-width: 10px 10px 10px 0;
             border-color: transparent white transparent transparent;
         }
 
-        .right::after {
-            left: -16px;
-        }
-
         .content {
-            padding: 20px 30px;
+            padding: 20px; /* Padding for content */
             background-color: white;
             position: relative;
             border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+        }
+
+        /* Publication Section Styles */
+        .publication-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #E1F5FE; /* Light Blue */
+            border-left: 4px solid #0288D1; /* Darker Blue */
+            border-radius: 5px;
         }
 
         /* Little Wins Section Styles */
@@ -250,85 +243,55 @@
 
         .little-win-item {
             padding: 10px;
-            background: #E0F7FA; /* Light Cyan Background */
-            border-left: 4px solid #00ACC1; /* Dark Cyan */
+            background: #E1F5FE; /* Light Blue Background */
+            border-left: 4px solid #0288D1; /* Darker Blue */
             border-radius: 5px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.5s forwards;
         }
 
-        /* Animation */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Scroll to Top Arrow */
+        /* Scroll to Top Button Styles */
         .scroll-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            display: none; /* Hidden by default */
             background-color: #4B6EAF; /* Soft Blue */
             color: white;
             border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
-            display: none; /* Hidden by default */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        /* Responsive Styles */
-        @media (max-width: 600px) {
-            .side-nav {
-                width: 100%;
-                height: auto;
-                position: relative;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-
-            .side-nav img {
-                width: 60px; /* Smaller image for mobile */
-            }
-
-            header {
-                margin-left: 0;
-            }
-
-            .content {
-                margin-left: 0;
-                padding: 10px;
-            }
-
-            section {
-                margin: 5px;
-            }
-
-            .timeline-item {
-                padding: 10px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 
 <body>
+
     <!-- Side Navigation Bar -->
     <div class="side-nav">
-        <img src="your-picture.jpg" alt="Your Name"> <!-- Replace with your picture -->
+        <img src="your-picture.jpg" alt="Your Picture">
         <h2>Your Name</h2>
-        <p>Your Address</p>
+        <p>Your Job Title</p>
         <div class="social-media">
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="linkedin-url">LinkedIn</a>
+            <a href="github-url">GitHub</a>
+            <a href="portfolio-url">Portfolio</a>
         </div>
-        <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a>
+        <a href="your-resume.pdf" class="resume-btn">Download Resume</a>
     </div>
 
-    <!-- Top Navigation Bar -->
+    <!-- Header -->
     <header>
         <nav class="horizontal-nav">
             <ul>
@@ -395,7 +358,6 @@
                         <p>Internship Company Name - Brief description of your responsibilities and achievements.</p>
                     </div>
                 </div>
-                <!-- Add more job experiences as needed -->
                 <div class="container left">
                     <div class="content">
                         <h2>2022</h2>
@@ -483,15 +445,17 @@
         const sections = document.querySelectorAll('section');
         const options = {
             root: null,
-            threshold: 0.1,
+            threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
+                } else {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(20px)';
                 }
             });
         }, options);
@@ -500,22 +464,22 @@
             observer.observe(section);
         });
 
-        // Scroll to Top functionality
+        // Scroll to Top Button
         const scrollTopBtn = document.getElementById('scroll-top-btn');
-        
         window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopBtn.style.display = "block"; // Show the button
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
             } else {
-                scrollTopBtn.style.display = "none"; // Hide the button
+                scrollTopBtn.style.display = "none";
             }
         });
 
         scrollTopBtn.addEventListener('click', () => {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         });
     </script>
+
 </body>
 
 </html>
