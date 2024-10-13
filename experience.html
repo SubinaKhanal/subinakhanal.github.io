@@ -1,86 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
     <style>
+        /* CSS Styles */
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            background-color: #474e5d;
-            font-family: Helvetica, sans-serif;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9; /* Light background color */
+            color: #333;
+            display: flex;
+            min-height: 100vh; /* Ensure the body covers full height */
+            flex-direction: column; /* Align footer at the bottom */
         }
 
-        /* Side Navigation Bar Styles */
+        /* Side Navigation Bar */
         .side-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100%;
-            background-color: #333;
+            width: 250px;
+            background: #4B6EAF; /* Soft Blue */
+            color: #fff;
             padding: 20px;
-            color: white;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         .side-nav img {
-            width: 100%;
+            width: 80%; /* Adjust size of the profile picture */
             border-radius: 50%;
+            margin-bottom: 20px;
         }
 
-        .side-nav h2, .side-nav p {
+        .side-nav h2 {
+            margin: 10px 0;
             text-align: center;
         }
 
-        .side-nav .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+        .side-nav p {
+            text-align: center;
+            margin: 10px 0;
         }
 
-        .side-nav .resume-btn {
-            display: block;
-            margin-top: 10px;
-            text-align: center;
-            background-color: #FF9F55;
-            padding: 10px;
-            color: white;
+        .social-media {
+            margin: 10px 0;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin-right: 10px;
             text-decoration: none;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            background: #fff;
+            color: #4B6EAF; /* Soft Blue */
+            padding: 10px 15px;
             border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
         }
 
-        /* Header Styles */
+        /* Top Navigation Bar */
         header {
-            background-color: #333;
-            padding: 10px;
-            color: white;
+            background: #2E3B4E; /* Darker Gray */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-left: 250px; /* Space for side navigation */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        .horizontal-nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
+        nav.horizontal-nav ul {
+            list-style: none;
             padding: 0;
         }
 
-        .horizontal-nav ul li {
+        nav.horizontal-nav ul li {
+            display: inline;
             margin: 0 15px;
         }
 
-        .horizontal-nav ul li a {
-            color: white;
+        nav.horizontal-nav a {
+            color: #fff;
             text-decoration: none;
+            transition: color 0.3s;
         }
 
-        /* Main Content Styles */
+        nav.horizontal-nav a:hover {
+            color: #B0D4E8; /* Light Blue */
+        }
+
+        /* Main Content */
         .content {
-            margin-left: 220px; /* Offset for side nav */
+            margin-left: 250px; /* Space for side navigation */
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure footer stays at the bottom */
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
         }
 
         h2 {
-            color: #FF9F55; /* Accent color for headings */
+            border-bottom: 2px solid #4B6EAF; /* Soft Blue */
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2E3B4E; /* Darker Gray */
+            color: white;
+            width: 100%;
+        }
+
+        /* About Section Styles */
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .about-item {
+            padding: 10px;
+            background: #E1F5FE; /* Light Blue Background */
+            border-left: 4px solid #0288D1; /* Darker Blue */
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
         }
 
         /* Experience Section Styles */
@@ -88,10 +163,8 @@
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 0; /* Padding for the timeline */
         }
 
-        /* The actual timeline (the vertical ruler) */
         .timeline::after {
             content: '';
             position: absolute;
@@ -103,28 +176,34 @@
             margin-left: -3px;
         }
 
-        /* Container around content */
         .container {
-            padding: 10px 20px; /* Adjusted padding for better width */
+            padding: 10px 40px;
             position: relative;
             background-color: inherit;
-            width: 60%; /* Set the width of the timeline boxes */
-            margin-bottom: 20px; /* Spacing between timeline entries */
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+            width: 50%;
         }
 
-        /* Place the container to the left */
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
         .left {
             left: 0;
         }
 
-        /* Place the container to the right */
         .right {
             left: 50%;
         }
 
-        /* Add arrows to the left container (pointing right) */
         .left::before {
             content: " ";
             height: 0;
@@ -132,13 +211,12 @@
             top: 22px;
             width: 0;
             z-index: 1;
-            right: 30px; /* Adjusted for better alignment */
+            right: 30px;
             border: medium solid white;
             border-width: 10px 0 10px 10px;
             border-color: transparent transparent transparent white;
         }
 
-        /* Add arrows to the right container (pointing left) */
         .right::before {
             content: " ";
             height: 0;
@@ -146,28 +224,21 @@
             top: 22px;
             width: 0;
             z-index: 1;
-            left: 30px; /* Adjusted for better alignment */
+            left: 30px;
             border: medium solid white;
             border-width: 10px 10px 10px 0;
             border-color: transparent white transparent transparent;
         }
 
-        /* The actual content */
+        .right::after {
+            left: -16px;
+        }
+
         .content {
-            padding: 20px; /* Padding for content */
+            padding: 20px 30px;
             background-color: white;
             position: relative;
             border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
-        }
-
-        /* Publication Section Styles */
-        .publication-item {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #E1F5FE; /* Light Blue */
-            border-left: 4px solid #0288D1; /* Darker Blue */
-            border-radius: 5px;
         }
 
         /* Little Wins Section Styles */
@@ -179,55 +250,85 @@
 
         .little-win-item {
             padding: 10px;
-            background: #E1F5FE; /* Light Blue Background */
-            border-left: 4px solid #0288D1; /* Darker Blue */
+            background: #E0F7FA; /* Light Cyan Background */
+            border-left: 4px solid #00ACC1; /* Dark Cyan */
             border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
         }
 
-        /* Scroll to Top Button Styles */
+        /* Animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll to Top Arrow */
         .scroll-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            display: none; /* Hidden by default */
             background-color: #4B6EAF; /* Soft Blue */
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
             cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: none; /* Hidden by default */
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .side-nav {
+                width: 100%;
+                height: auto;
+                position: relative;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .side-nav img {
+                width: 60px; /* Smaller image for mobile */
+            }
+
+            header {
+                margin-left: 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            section {
+                margin: 5px;
+            }
+
+            .timeline-item {
+                padding: 10px;
             }
         }
     </style>
 </head>
 
 <body>
-
     <!-- Side Navigation Bar -->
     <div class="side-nav">
-        <img src="your-picture.jpg" alt="Your Picture">
+        <img src="your-picture.jpg" alt="Your Name"> <!-- Replace with your picture -->
         <h2>Your Name</h2>
-        <p>Your Job Title</p>
+        <p>Your Address</p>
         <div class="social-media">
-            <a href="linkedin-url">LinkedIn</a>
-            <a href="github-url">GitHub</a>
-            <a href="portfolio-url">Portfolio</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
-        <a href="your-resume.pdf" class="resume-btn">Download Resume</a>
+        <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a>
     </div>
 
-    <!-- Header -->
+    <!-- Top Navigation Bar -->
     <header>
         <nav class="horizontal-nav">
             <ul>
@@ -289,23 +390,31 @@
                 </div>
                 <div class="container right">
                     <div class="content">
-                        <h2>2022</h2>
-                        <h4>Intern Developer</h4>
-                        <p>Company Name - Brief description of your responsibilities and achievements.</p>
+                        <h2>2023</h2>
+                        <h4>Intern</h4>
+                        <p>Internship Company Name - Brief description of your responsibilities and achievements.</p>
                     </div>
                 </div>
+                <!-- Add more job experiences as needed -->
                 <div class="container left">
                     <div class="content">
-                        <h2>2020</h2>
+                        <h2>2022</h2>
                         <h4>Junior Developer</h4>
                         <p>Company Name - Brief description of your responsibilities and achievements.</p>
                     </div>
                 </div>
                 <div class="container right">
                     <div class="content">
-                        <h2>2019</h2>
+                        <h2>2021</h2>
                         <h4>Intern</h4>
-                        <p>Company Name - Brief description of your responsibilities and achievements.</p>
+                        <p>Internship Company Name - Brief description of your responsibilities and achievements.</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>2020</h2>
+                        <h4>Volunteer Developer</h4>
+                        <p>Organization Name - Brief description of your responsibilities and achievements.</p>
                     </div>
                 </div>
             </div>
@@ -314,40 +423,75 @@
         <section id="publications">
             <h2>Publications</h2>
             <div class="publication-item">
-                <strong>Publication Title 1</strong> - Brief description of publication.
+                <a href="link-to-publication" style="text-decoration: none; color: inherit;">
+                    <strong>Title of Publication</strong> - Brief description of the publication.
+                </a>
             </div>
             <div class="publication-item">
-                <strong>Publication Title 2</strong> - Brief description of publication.
+                <a href="link-to-publication" style="text-decoration: none; color: inherit;">
+                    <strong>Title of Another Publication</strong> - Brief description of the publication.
+                </a>
             </div>
+            <!-- Add more publications as needed -->
         </section>
 
         <section id="little-wins">
             <h2>Little Wins</h2>
             <div class="little-wins-container">
-                <div class="little-win-item">Award or achievement description 1.</div>
-                <div class="little-win-item">Award or achievement description 2.</div>
-                <div class="little-win-item">Award or achievement description 3.</div>
+                <div class="little-win-item">
+                    <strong>Award Title 1</strong> - Brief description of the award.
+                </div>
+                <div class="little-win-item">
+                    <strong>Award Title 2</strong> - Brief description of the award.
+                </div>
+                <div class="little-win-item">
+                    <strong>Award Title 3</strong> - Brief description of the award.
+                </div>
+                <!-- Add more awards as needed -->
             </div>
         </section>
 
-        <button class="scroll-top" id="scroll-top-btn">Scroll to Top</button>
+        <button class="scroll-top" id="scroll-top-btn">↑</button>
     </div>
 
+    <footer>
+        <p>© 2024 Your Name. All rights reserved.</p>
+    </footer>
+
     <script>
-        // Intersection Observer for Animations
+        // JavaScript for Smooth Scrolling
+        document.querySelectorAll('nav.horizontal-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Trigger fade-in animation
+                target.style.opacity = '0';
+                target.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    target.style.opacity = '1';
+                    target.style.transform = 'translateY(0)';
+                }, 10);
+            });
+        });
+
+        // Trigger fade-in animation on scroll
         const sections = document.querySelectorAll('section');
         const options = {
-            threshold: 0.1
+            root: null,
+            threshold: 0.1,
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                } else {
-                    entry.target.style.opacity = '0';
-                    entry.target.style.transform = 'translateY(20px)';
+                    observer.unobserve(entry.target);
                 }
             });
         }, options);
@@ -356,20 +500,22 @@
             observer.observe(section);
         });
 
-        // Scroll to Top Button
+        // Scroll to Top functionality
         const scrollTopBtn = document.getElementById('scroll-top-btn');
+        
         window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollTopBtn.style.display = "block";
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block"; // Show the button
             } else {
-                scrollTopBtn.style.display = "none";
+                scrollTopBtn.style.display = "none"; // Hide the button
             }
         });
 
         scrollTopBtn.addEventListener('click', () => {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         });
     </script>
 </body>
+
 </html>
