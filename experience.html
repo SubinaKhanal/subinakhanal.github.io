@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background: #f4f4f4;
+            background: #f0f8ff;
             color: #333;
             display: flex;
         }
@@ -23,20 +24,31 @@
         /* Side Navigation Bar */
         .side-nav {
             width: 250px;
-            background: #4CAF50;
+            background: #007BFF; /* Bright Blue */
             color: #fff;
             padding: 20px;
             height: 100vh;
             position: fixed;
             overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         .side-nav img {
-            width: 100%;
+            width: 80%; /* Adjust size of the profile picture */
             border-radius: 50%;
+            margin-bottom: 20px;
         }
 
         .side-nav h2 {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .side-nav p {
+            text-align: center;
             margin: 10px 0;
         }
 
@@ -53,7 +65,7 @@
         .resume-btn {
             display: inline-block;
             background: #fff;
-            color: #4CAF50;
+            color: #007BFF; /* Bright Blue */
             padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
@@ -61,17 +73,17 @@
             text-align: center;
         }
 
-        /* Horizontal Navigation Bar */
+        /* Top Navigation Bar */
         header {
-            background: #fff;
-            color: #333;
+            background: #343A40; /* Dark Gray */
+            color: #fff;
             padding: 10px 0;
             text-align: center;
             margin-left: 250px; /* Space for side navigation */
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         nav.horizontal-nav ul {
@@ -85,8 +97,13 @@
         }
 
         nav.horizontal-nav a {
-            color: #333;
+            color: #fff;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav.horizontal-nav a:hover {
+            color: #007BFF; /* Bright Blue */
         }
 
         /* Main Content */
@@ -109,14 +126,14 @@
         }
 
         h2 {
-            border-bottom: 2px solid #4CAF50;
+            border-bottom: 2px solid #007BFF; /* Bright Blue */
             margin-bottom: 10px;
         }
 
         footer {
             text-align: center;
             padding: 10px;
-            background: #333;
+            background: #343A40; /* Dark Gray */
             color: white;
             position: relative;
             bottom: 0;
@@ -140,7 +157,7 @@
             }
 
             .side-nav img {
-                width: 80px; /* Smaller image for mobile */
+                width: 60px; /* Smaller image for mobile */
             }
 
             header {
@@ -158,6 +175,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Side Navigation Bar -->
     <div class="side-nav">
@@ -172,7 +190,7 @@
         <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a> <!-- Replace with your resume link -->
     </div>
 
-    <!-- Horizontal Navigation Bar -->
+    <!-- Top Navigation Bar -->
     <header>
         <nav class="horizontal-nav">
             <ul>
@@ -253,7 +271,7 @@
             root: null,
             threshold: 0.1,
         };
-        
+
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -269,4 +287,5 @@
         });
     </script>
 </body>
+
 </html>
