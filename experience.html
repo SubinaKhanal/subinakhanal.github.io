@@ -143,12 +143,14 @@
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             max-width: 300px;
-            margin: 20px auto; /* Added margin for spacing */
+            margin: 10px; /* Reduced margin to fit cards side by side */
             text-align: center;
             font-family: Arial;
             border-radius: 5px; /* Added border-radius */
             background: #fff; /* Background color for card */
             overflow: hidden; /* Ensure the image doesn't overflow */
+            display: inline-block; /* Allow cards to be inline */
+            vertical-align: top; /* Align cards at the top */
         }
 
         .card img {
@@ -317,12 +319,26 @@
                 transform: scale(0.5);
                 opacity: 0;
             }
-            50% {
-                transform: scale(1.1);
+
+            60% {
+                transform: scale(1.2);
                 opacity: 1;
             }
+
             100% {
                 transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
@@ -339,6 +355,7 @@
             cursor: pointer;
             display: none;
             z-index: 1000;
+            font-size: 14px; /* Smaller font size */
         }
 
         @media screen and (max-width: 600px) {
@@ -444,7 +461,7 @@
 
         <section id="education">
             <h2>Education</h2>
-            <div class="education-container">
+            <div class="education-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
                 <div class="card">
                     <img src="path_to_university_image.jpg" alt="University" />
                     <h1>Bachelor of Science in Computer Science</h1>
