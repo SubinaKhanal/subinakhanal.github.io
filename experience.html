@@ -110,7 +110,7 @@
 
         /* Main Content */
         .content {
-            margin-left: 250px; /* Space for side navigation */
+            margin-left: 210px; /* Reduce the margin to move the content closer to the side nav */
             padding: 20px;
             flex-grow: 1;
             display: flex;
@@ -163,6 +163,7 @@
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
+            margin-left: -50px; /* Move the timeline left closer to the side nav */
         }
 
         .timeline::after {
@@ -180,7 +181,7 @@
             padding: 10px 40px;
             position: relative;
             background-color: inherit;
-            width: 80%;
+            width: 60%; /* Increased width from 50% to 60% */
         }
 
         .container::after {
@@ -241,6 +242,23 @@
             border-radius: 6px;
         }
 
+        /* Education Section Styles */
+        .education-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .education-item {
+            padding: 10px;
+            background: #E8F5E9; /* Light Green Background */
+            border-left: 4px solid #66BB6A; /* Dark Green */
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
         /* Little Wins Section Styles */
         .little-wins-container {
             display: flex;
@@ -252,6 +270,23 @@
             padding: 10px;
             background: #E0F7FA; /* Light Cyan Background */
             border-left: 4px solid #00ACC1; /* Dark Cyan */
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        /* Publications Section Styles */
+        .publications-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .publication-item {
+            padding: 10px;
+            background: #FFFDE7; /* Light Yellow Background */
+            border-left: 4px solid #FFD54F; /* Dark Yellow */
             border-radius: 5px;
             opacity: 0;
             transform: translateY(20px);
@@ -287,28 +322,15 @@
             .side-nav {
                 width: 100%;
                 height: auto;
-                position: relative;
-            }
-
-            .side-nav img {
-                width: 60px; /* Smaller image for mobile */
-            }
-
-            header {
-                margin-left: 0;
+                position: relative; /* Change position for smaller screens */
             }
 
             .content {
-                margin-left: 0;
-                padding: 10px;
+                margin-left: 0; /* No margin for content */
             }
 
-            section {
-                margin: 5px;
-            }
-
-            .timeline-item {
-                padding: 10px;
+            header {
+                margin-left: 0; /* No margin for top nav */
             }
         }
     </style>
@@ -317,15 +339,15 @@
 <body>
     <!-- Side Navigation Bar -->
     <div class="side-nav">
-        <img src="your-picture.jpg" alt="Your Name"> <!-- Replace with your picture -->
+        <img src="your-profile-pic.jpg" alt="Profile Picture">
         <h2>Your Name</h2>
-        <p>Your Address</p>
+        <p>Web Developer</p>
         <div class="social-media">
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
         </div>
-        <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a>
+        <a href="#" class="resume-btn">View Resume</a>
     </div>
 
     <!-- Top Navigation Bar -->
@@ -333,188 +355,117 @@
         <nav class="horizontal-nav">
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#little-wins">Little Wins</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
     <div class="content">
+        <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
             <div class="about-container">
-                <div class="about-item">
-                    Hello! I am a passionate software developer with a keen interest in building innovative applications. My journey began in [Year/Context], and since then, I have been dedicated to enhancing my skills in various programming languages and technologies.
-                </div>
-                <div class="about-item">
-                    I enjoy working on collaborative projects, and I love learning new technologies that help me grow as a developer. In my spare time, I also engage in [Hobbies/Interests], which helps me maintain a well-rounded approach to my work and life.
-                </div>
-                <div class="about-item">
-                    My goal is to continuously improve and make meaningful contributions to the tech community. I believe in the power of technology to solve real-world problems and am excited about the possibilities that lie ahead.
-                </div>
+                <div class="about-item">Detail 1</div>
+                <div class="about-item">Detail 2</div>
+                <div class="about-item">Detail 3</div>
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-container">
-                <div class="education-item">
-                    <div class="education-year">2024</div>
-                    <div>
-                        <strong>Degree:</strong> Bachelor's Degree<br>
-                        <strong>Institution:</strong> University Name
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2020</div>
-                    <div>
-                        <strong>Degree:</strong> High School Diploma<br>
-                        <strong>Institution:</strong> High School Name
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Experience Section -->
         <section id="experience">
             <h2>Experience</h2>
             <div class="timeline">
                 <div class="container left">
                     <div class="content">
-                        <h2>2024</h2>
-                        <h4>Software Developer</h4>
-                        <p>Company Name - Brief description of your responsibilities and achievements.</p>
+                        <h3>Job Title 1</h3>
+                        <p>Description of job responsibilities and achievements.</p>
                     </div>
                 </div>
                 <div class="container right">
                     <div class="content">
-                        <h2>2023</h2>
-                        <h4>Intern</h4>
-                        <p>Internship Company Name - Brief description of your responsibilities and achievements.</p>
+                        <h3>Job Title 2</h3>
+                        <p>Description of job responsibilities and achievements.</p>
                     </div>
                 </div>
-                <!-- Add more job experiences as needed -->
                 <div class="container left">
                     <div class="content">
-                        <h2>2022</h2>
-                        <h4>Junior Developer</h4>
-                        <p>Company Name - Brief description of your responsibilities and achievements.</p>
+                        <h3>Job Title 3</h3>
+                        <p>Description of job responsibilities and achievements.</p>
                     </div>
                 </div>
                 <div class="container right">
                     <div class="content">
-                        <h2>2021</h2>
-                        <h4>Intern</h4>
-                        <p>Internship Company Name - Brief description of your responsibilities and achievements.</p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h2>2020</h2>
-                        <h4>Volunteer Developer</h4>
-                        <p>Organization Name - Brief description of your responsibilities and achievements.</p>
+                        <h3>Job Title 4</h3>
+                        <p>Description of job responsibilities and achievements.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-item">Degree in XYZ - University Name</div>
+                <div class="education-item">Degree in ABC - College Name</div>
+                <div class="education-item">Certification in DEF - Institution Name</div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
         <section id="publications">
             <h2>Publications</h2>
-            <div class="publication-item">
-                <a href="link-to-publication" style="text-decoration: none; color: inherit;">
-                    <strong>Title of Publication</strong> - Brief description of the publication.
-                </a>
+            <div class="publications-container">
+                <div class="publication-item">Publication Title 1 - Description</div>
+                <div class="publication-item">Publication Title 2 - Description</div>
+                <div class="publication-item">Publication Title 3 - Description</div>
             </div>
-            <div class="publication-item">
-                <a href="link-to-publication" style="text-decoration: none; color: inherit;">
-                    <strong>Title of Another Publication</strong> - Brief description of the publication.
-                </a>
-            </div>
-            <!-- Add more publications as needed -->
         </section>
 
+        <!-- Little Wins Section -->
         <section id="little-wins">
             <h2>Little Wins</h2>
             <div class="little-wins-container">
-                <div class="little-win-item">
-                    <strong>Award Title 1</strong> - Brief description of the award.
-                </div>
-                <div class="little-win-item">
-                    <strong>Award Title 2</strong> - Brief description of the award.
-                </div>
-                <div class="little-win-item">
-                    <strong>Award Title 3</strong> - Brief description of the award.
-                </div>
-                <!-- Add more awards as needed -->
+                <div class="little-win-item">Win 1</div>
+                <div class="little-win-item">Win 2</div>
+                <div class="little-win-item">Win 3</div>
             </div>
         </section>
 
-        <button class="scroll-top" id="scroll-top-btn">↑</button>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: your-email@example.com</p>
+        </section>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-top" onclick="scrollToTop()">↑</button>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Your Name. All rights reserved.</p>
+        &copy; 2024 Your Name
     </footer>
 
     <script>
-        // JavaScript for Smooth Scrolling
-        document.querySelectorAll('nav.horizontal-nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Trigger fade-in animation
-                target.style.opacity = '0';
-                target.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    target.style.opacity = '1';
-                    target.style.transform = 'translateY(0)';
-                }, 10);
-            });
-        });
-
-        // Trigger fade-in animation on scroll
-        const sections = document.querySelectorAll('section');
-        const options = {
-            root: null,
-            threshold: 0.1,
+        // Scroll to Top Function
+        const scrollToTopButton = document.querySelector('.scroll-top');
+        window.onscroll = () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Scroll to Top functionality
-        const scrollTopBtn = document.getElementById('scroll-top-btn');
-        
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopBtn.style.display = "block"; // Show the button
-            } else {
-                scrollTopBtn.style.display = "none"; // Hide the button
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', () => {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
 
