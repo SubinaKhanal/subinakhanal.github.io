@@ -180,35 +180,57 @@
         /* Experience Section Styles */
         .experience-container {
             position: relative;
-            padding-left: 40px; /* Indent for the timeline */
+            padding: 20px 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
         }
 
         .timeline-item {
             position: relative;
-            padding: 10px 20px;
-            margin-bottom: 20px;
+            padding: 20px;
+            margin: 10px 0;
             background: #E9E9E9; /* Light Gray */
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .timeline-item:before {
+        .timeline-item::before {
             content: '';
             position: absolute;
-            left: -15px;
-            top: 10px;
-            height: 10px;
-            width: 10px;
+            left: -15px; /* Position for the vertical line */
+            top: 20px; /* Center the line */
+            height: calc(100% - 40px); /* Length of the line */
+            width: 4px; /* Width of the line */
             background: #4B6EAF; /* Soft Blue */
-            border-radius: 50%;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #2E3B4E; /* Darker Gray */
-            color: white;
-            width: 100%;
+        .timeline-content {
+            margin-left: 40px; /* Space for the line */
+        }
+
+        .timeline-content h3 {
+            margin: 0 0 5px 0; /* Spacing for job title */
+        }
+
+        .timeline-content h4 {
+            margin: 0 0 5px 0; /* Spacing for company name */
+            font-weight: normal; /* Normal weight for company name */
+        }
+
+        .timeline-content .date {
+            font-size: 0.9em;
+            color: #555; /* Dark Gray for the date */
+        }
+
+        .timeline-item:nth-child(odd) {
+            background: #F0F7E9; /* Light Green */
+        }
+
+        .timeline-item:nth-child(even) {
+            background: #E7F0F8; /* Light Blue */
         }
 
         /* Animation */
@@ -303,19 +325,25 @@
         <section id="experience">
             <h2>Experience</h2>
             <div class="experience-container">
-                <div class="timeline-item">
-                    <strong>Job Title:</strong> Software Developer<br>
-                    <strong>Company:</strong> Company Name<br>
-                    <strong>Duration:</strong> Jan 2023 - Present<br>
-                    <p>Brief description of your responsibilities and achievements.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Software Developer</h3>
+                            <h4>Company Name</h4>
+                            <div class="date">Jan 2023 - Present</div>
+                            <p>Brief description of your responsibilities and achievements.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Intern</h3>
+                            <h4>Internship Company Name</h4>
+                            <div class="date">Jun 2022 - Dec 2022</div>
+                            <p>Brief description of your responsibilities and achievements.</p>
+                        </div>
+                    </div>
+                    <!-- Add more job experiences as needed -->
                 </div>
-                <div class="timeline-item">
-                    <strong>Job Title:</strong> Intern<br>
-                    <strong>Company:</strong> Internship Company Name<br>
-                    <strong>Duration:</strong> Jun 2022 - Dec 2022<br>
-                    <p>Brief description of your responsibilities and achievements.</p>
-                </div>
-                <!-- Add more job experiences as needed -->
             </div>
         </section>
 
