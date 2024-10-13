@@ -122,9 +122,7 @@
             padding: 20px;
             margin: 10px auto;
             max-width: 800px;
-            background: white;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 0.5s forwards;
@@ -153,28 +151,15 @@
         .education-item {
             display: flex;
             align-items: center;
-            padding: 15px;
-            background: #E7F0F8; /* Light Blue Background */
-            border-left: 4px solid #4B6EAF; /* Soft Blue */
+            padding: 10px;
+            margin: 10px 0;
             border-radius: 5px;
-        }
-
-        .education-item:last-child {
-            border-bottom: none; /* Remove bottom border for the last item */
         }
 
         .education-year {
             font-weight: bold;
             margin-right: 20px;
             color: #4B6EAF; /* Soft Blue */
-        }
-
-        .publication-item {
-            margin-bottom: 10px;
-            padding: 10px;
-            background: #F0F7E9; /* Light Green Background */
-            border-left: 4px solid #34A853; /* Green */
-            border-radius: 5px;
         }
 
         /* Experience Section Styles */
@@ -186,29 +171,31 @@
         .timeline {
             position: relative;
             padding: 20px 0;
+            list-style-type: none;
         }
 
         .timeline-item {
             position: relative;
             padding: 20px;
             margin: 10px 0;
-            background: #E9E9E9; /* Light Gray */
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: transparent; /* Transparent background */
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -15px; /* Position for the vertical line */
+            left: 0; /* Position for the vertical line */
             top: 20px; /* Center the line */
-            height: calc(100% - 40px); /* Length of the line */
-            width: 4px; /* Width of the line */
+            height: 100%; /* Length of the line */
+            width: 2px; /* Width of the line */
             background: #4B6EAF; /* Soft Blue */
+            z-index: -1; /* Behind content */
         }
 
         .timeline-content {
-            margin-left: 40px; /* Space for the line */
+            margin-left: 30px; /* Space for the line */
+            padding: 10px;
+            border-radius: 5px; /* Rounded corners */
         }
 
         .timeline-content h3 {
@@ -225,14 +212,6 @@
             color: #555; /* Dark Gray for the date */
         }
 
-        .timeline-item:nth-child(odd) {
-            background: #F0F7E9; /* Light Green */
-        }
-
-        .timeline-item:nth-child(even) {
-            background: #E7F0F8; /* Light Blue */
-        }
-
         /* Little Wins Section Styles */
         .little-wins-container {
             display: flex;
@@ -241,7 +220,7 @@
         }
 
         .little-win-item {
-            padding: 15px;
+            padding: 10px;
             background: #E0F7FA; /* Light Cyan Background */
             border-left: 4px solid #00ACC1; /* Dark Cyan */
             border-radius: 5px;
@@ -281,6 +260,10 @@
 
             section {
                 margin: 5px;
+            }
+
+            .timeline-item {
+                padding: 10px;
             }
         }
     </style>
@@ -337,25 +320,25 @@
         <section id="experience">
             <h2>Experience</h2>
             <div class="experience-container">
-                <div class="timeline">
-                    <div class="timeline-item">
+                <ul class="timeline">
+                    <li class="timeline-item">
                         <div class="timeline-content">
                             <h3>Software Developer</h3>
                             <h4>Company Name</h4>
                             <div class="date">Jan 2023 - Present</div>
                             <p>Brief description of your responsibilities and achievements.</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
+                    </li>
+                    <li class="timeline-item">
                         <div class="timeline-content">
                             <h3>Intern</h3>
                             <h4>Internship Company Name</h4>
                             <div class="date">Jun 2022 - Dec 2022</div>
                             <p>Brief description of your responsibilities and achievements.</p>
                         </div>
-                    </div>
+                    </li>
                     <!-- Add more job experiences as needed -->
-                </div>
+                </ul>
             </div>
         </section>
 
