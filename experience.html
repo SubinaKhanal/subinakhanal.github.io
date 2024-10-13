@@ -163,14 +163,14 @@
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
-            margin-left: -50px; 
+            margin-left: 0; /* Aligning the timeline with the side navigation */
         }
 
         .timeline::after {
             content: '';
             position: absolute;
             width: 6px;
-            background-color: white;
+            background-color: black; /* Changed to black */
             top: 0;
             bottom: 0;
             left: 50%;
@@ -182,6 +182,7 @@
             position: relative;
             background-color: inherit;
             width: 60%; /* Increased width from 50% to 60% */
+            margin-left: 20px; /* Add margin for the left container */
         }
 
         .container::after {
@@ -317,67 +318,97 @@
             display: none; /* Hidden by default */
         }
 
-        /* Responsive Styles */
-        @media (max-width: 600px) {
+        /* Responsive */
+        @media screen and (max-width: 768px) {
             .side-nav {
                 width: 100%;
                 height: auto;
-                position: relative; /* Change position for smaller screens */
-            }
-
-            .content {
-                margin-left: 0; /* No margin for content */
+                position: relative;
             }
 
             header {
-                margin-left: 0; /* No margin for top nav */
+                margin-left: 0;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .timeline {
+                margin-left: 0;
+                padding: 0 10px;
+            }
+
+            .container {
+                width: 90%; /* Make containers full width on small screens */
+                margin: 0 auto; /* Center align on small screens */
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Side Navigation Bar -->
     <div class="side-nav">
-        <img src="your-profile-pic.jpg" alt="Profile Picture">
+        <img src="path/to/your/profile.jpg" alt="Profile Picture">
         <h2>Your Name</h2>
-        <p>Web Developer</p>
+        <p>Your Title</p>
         <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
             <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
         </div>
-        <a href="#" class="resume-btn">View Resume</a>
+        <a href="path/to/your/resume.pdf" class="resume-btn" target="_blank">View Resume</a>
     </div>
 
-    <!-- Top Navigation Bar -->
     <header>
         <nav class="horizontal-nav">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#publications">Publications</a></li>
                 <li><a href="#little-wins">Little Wins</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <div class="content">
-        <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
             <div class="about-container">
-                <div class="about-item">
-                    Hello! I am a passionate software developer with a keen interest in building innovative applications. My journey began in [Year/Context], and since then, I have been dedicated to enhancing my skills in various programming languages and technologies.
+                <div class="about-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="about-item">Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</div>
+                <div class="about-item">Sed nisi. Nulla quis sem at nibh elementum imperdiet.</div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name 1<br>Year - Year<br>Description of your role and accomplishments.</p>
+                    </div>
                 </div>
-                <div class="about-item">
-                    I enjoy working on collaborative projects, and I love learning new technologies that help me grow as a developer. In my spare time, I also engage in [Hobbies/Interests], which helps me maintain a well-rounded approach to my work and life.
+                <div class="container right">
+                    <div class="content">
+                        <h3>Job Title 2</h3>
+                        <p>Company Name 2<br>Year - Year<br>Description of your role and accomplishments.</p>
+                    </div>
                 </div>
-                <div class="about-item">
-                    My goal is to continuously improve and make meaningful contributions to the tech community. I believe in the power of technology to solve real-world problems and am excited about the possibilities that lie ahead.
+                <div class="container left">
+                    <div class="content">
+                        <h3>Job Title 3</h3>
+                        <p>Company Name 3<br>Year - Year<br>Description of your role and accomplishments.</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h3>Job Title 4</h3>
+                        <p>Company Name 4<br>Year - Year<br>Description of your role and accomplishments.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -385,113 +416,49 @@
         <section id="education">
             <h2>Education</h2>
             <div class="education-container">
-                <div class="education-item">
-                    <div class="education-year">2024</div>
-                    <div>
-                        <strong>Degree:</strong> Bachelor's Degree<br>
-                        <strong>Institution:</strong> University Name
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2020</div>
-                    <div>
-                        <strong>Degree:</strong> High School Diploma<br>
-                        <strong>Institution:</strong> High School Name
-                    </div>
-                </div>
+                <div class="education-item">Degree in Field of Study from University Name (Year)</div>
+                <div class="education-item">Degree in Field of Study from University Name (Year)</div>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="container left">
-                    <div class="content">
-                        <h3>Job Title 1</h3>
-                        <p>Description of job responsibilities and achievements.</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h3>Job Title 2</h3>
-                        <p>Description of job responsibilities and achievements.</p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h3>Job Title 3</h3>
-                        <p>Description of job responsibilities and achievements.</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h3>Job Title 4</h3>
-                        <p>Description of job responsibilities and achievements.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-         <section id="publications">
-            <h2>Publications</h2>
-            <div class="publication-item">
-                <a href="link-to-publication" style="text-decoration: none; color: inherit;">
-                    <strong>Title of Publication</strong> - Brief description of the publication.
-                </a>
-            </div>
-            <div class="publication-item">
-                <a href="link-to-publication" style="text-decoration: none; color: inherit;">
-                    <strong>Title of Another Publication</strong> - Brief description of the publication.
-                </a>
-            </div>
-            <!-- Add more publications as needed -->
         </section>
 
         <section id="little-wins">
             <h2>Little Wins</h2>
             <div class="little-wins-container">
-                <div class="little-win-item">
-                    <strong>Award Title 1</strong> - Brief description of the award.
-                </div>
-                <div class="little-win-item">
-                    <strong>Award Title 2</strong> - Brief description of the award.
-                </div>
-                <div class="little-win-item">
-                    <strong>Award Title 3</strong> - Brief description of the award.
-                </div>
-                <!-- Add more awards as needed -->
+                <div class="little-win-item">Won a hackathon.</div>
+                <div class="little-win-item">Published an article.</div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your-email@example.com</p>
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publications-container">
+                <div class="publication-item">Title of Publication (Year)</div>
+                <div class="publication-item">Title of Publication (Year)</div>
+            </div>
         </section>
 
-        <!-- Scroll to Top Button -->
+        <footer>
+            &copy; 2024 Your Name. All rights reserved.
+        </footer>
+
         <button class="scroll-top" onclick="scrollToTop()">↑</button>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Your Name
-    </footer>
-
     <script>
         // Scroll to Top Function
-        const scrollToTopButton = document.querySelector('.scroll-top');
-        window.onscroll = () => {
+        const scrollTopBtn = document.querySelector('.scroll-top');
+
+        window.onscroll = function () {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopButton.style.display = "block";
+                scrollTopBtn.style.display = "block";
             } else {
-                scrollToTopButton.style.display = "none";
+                scrollTopBtn.style.display = "none";
             }
         };
 
         function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     </script>
 </body>
