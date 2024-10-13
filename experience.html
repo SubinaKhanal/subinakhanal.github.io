@@ -16,9 +16,11 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background: #f0f8ff;
+            background: #f0f8ff; /* Light background color */
             color: #333;
             display: flex;
+            min-height: 100vh; /* Ensure the body covers full height */
+            flex-direction: column; /* Align footer at the bottom */
         }
 
         /* Side Navigation Bar */
@@ -111,6 +113,9 @@
             margin-left: 250px; /* Space for side navigation */
             padding: 20px;
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure footer stays at the bottom */
         }
 
         section {
@@ -135,8 +140,6 @@
             padding: 10px;
             background: #343A40; /* Dark Gray */
             color: white;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
 
@@ -238,11 +241,11 @@
                 <!-- Add more publications as needed -->
             </ul>
         </section>
-    </div>
 
-    <footer>
-        <p>© 2024 Your Name. All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>© 2024 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script>
         // JavaScript for Smooth Scrolling
