@@ -252,8 +252,8 @@
 
         .little-win-item {
             padding: 10px;
-            background: #82CAAF;
-            border-left: 4px solid #FFC0CB;
+            background: #E0F7FA;
+            border-left: 4px solid #00ACC1;
             border-radius: 25px; /* Updated for chip style */
             opacity: 0;
             transform: translateY(20px) scale(0.95);
@@ -304,27 +304,67 @@
             }
         }
 
-        /* Scroll to Top Arrow */
+        /* Education Section Styles */
+        .education-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+        }
+
+        .education-item {
+            padding: 10px;
+            background: #E8F5E9;
+            border-left: 4px solid #388E3C;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        /* Academic Projects Section Styles */
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+        }
+
+        .project-item {
+            padding: 10px;
+            background: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: auto;
+        }
+
+        /* Scroll to Top Button */
         .scroll-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #4B6EAF;
-            color: white;
+            background: #4B6EAF;
+            color: #fff;
             border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
+            border-radius: 5px;
+            padding: 10px 15px;
             cursor: pointer;
             display: none;
+            z-index: 1000;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 600px) {
+        @media screen and (max-width: 600px) {
             .side-nav {
                 width: 100%;
                 height: auto;
+                position: relative;
             }
 
             .content {
@@ -345,7 +385,9 @@
                 margin: 5px 0;
             }
 
-            .little-win-item {
+            .little-win-item,
+            .education-item,
+            .project-item {
                 font-size: 14px; /* Adjust font size for smaller screens */
             }
         }
@@ -374,6 +416,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#little-wins">Little Wins</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Academic Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -414,6 +458,23 @@
                 <div class="little-win-item">First Little Win: Completed an important task!</div>
                 <div class="little-win-item">Second Little Win: Solved a tricky bug today!</div>
                 <div class="little-win-item">Third Little Win: Received positive feedback from a client!</div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-item">Bachelor of Science in Computer Science, University Name, Year</div>
+                <div class="education-item">Master of Science in Data Science, University Name, Year</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Academic Projects</h2>
+            <div class="projects-container">
+                <div class="project-item">Project Title 1: Description of project and its significance.</div>
+                <div class="project-item">Project Title 2: Description of project and its significance.</div>
+                <div class="project-item">Project Title 3: Description of project and its significance.</div>
             </div>
         </section>
     </div>
