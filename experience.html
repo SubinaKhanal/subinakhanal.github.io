@@ -156,6 +156,36 @@
             width: 100%;
         }
 
+        #projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    grid-gap: 20px; /* Space between the cards */
+    justify-items: center; /* Centers the cards horizontally */
+    margin-top: 20px; /* Adds some space above the section */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Make the card take the full available width */
+    margin: 10px; /* Space between the cards */
+    text-align: center;
+    font-family: Arial;
+    border-radius: 5px;
+    background: #fff;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px; /* Padding inside the card */
+}
+
+.card img {
+    width: 50px; /* Ensure consistent image size */
+    margin: 5px; /* Adds spacing between images */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
         /* Card Styles for Education Section */
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
