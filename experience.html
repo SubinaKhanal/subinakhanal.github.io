@@ -297,22 +297,43 @@
         }
 
         /* Little Wins Section Styles */
-        .little-wins-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            position: relative;
-        }
+       .little-wins-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-around; /* Distribute space evenly */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Space above section */
+}
 
-        .little-win-item {
-            padding: 10px;
-            background: #E0F7FA;
-            border-left: 4px solid #00ACC1;
-            border-radius: 25px; /* Updated for chip style */
-            opacity: 0;
-            transform: translateY(20px) scale(0.95);
-            animation: fadeInUp 0.5s forwards; /* Add animation */
-        }
+.little-win-card {
+    background: #E0F7FA; /* Light background for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center text */
+    transition: transform 0.3s; /* Transition effect */
+    flex: 0 1 calc(30% - 40px); /* Responsive size */
+    position: relative; /* For positioning icon */
+}
+
+.little-win-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.icon {
+    font-size: 40px; /* Size of the icon */
+    color: #FF9F55; /* Icon color */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.little-win-card h3 {
+    margin: 10px 0; /* Space above and below title */
+}
+
+.little-win-card p {
+    color: #555; /* Darker color for description */
+}
+
 
         /* Animation for Little Wins */
         @keyframes fadeInUp {
@@ -467,15 +488,46 @@
         </section>
 
         <section id="little-wins">
-            <h2>Little Wins</h2>
-            <div class="little-wins-container">
-                <div class="little-win-item">Learned a new programming language!</div>
-                <div class="little-win-item">Completed an online course!</div>
-                <div class="little-win-item">Attended a tech conference!</div>
-                <div class="little-win-item">Contributed to an open-source project!</div>
-                <div class="little-win-item">Built a personal website!</div>
+    <h2>Little Wins</h2>
+    <div class="little-wins-container">
+        <div class="little-win-card">
+            <div class="icon">
+                <i class="fa fa-trophy"></i>
             </div>
-        </section>
+            <h3>Best Paper Award</h3>
+            <p>Received the Best Paper Award at the XYZ Conference for research on ABC technology.</p>
+        </div>
+        <div class="little-win-card">
+            <div class="icon">
+                <i class="fa fa-graduation-cap"></i>
+            </div>
+            <h3>Online Course Completion</h3>
+            <p>Completed an advanced course on Machine Learning from Coursera.</p>
+        </div>
+        <div class="little-win-card">
+            <div class="icon">
+                <i class="fa fa-code"></i>
+            </div>
+            <h3>Open Source Contribution</h3>
+            <p>Contributed to an open-source project on GitHub, improving its documentation.</p>
+        </div>
+        <div class="little-win-card">
+            <div class="icon">
+                <i class="fa fa-comments"></i>
+            </div>
+            <h3>Tech Conference Attendance</h3>
+            <p>Attended the Annual Tech Conference 2023 to network and learn about new trends.</p>
+        </div>
+        <div class="little-win-card">
+            <div class="icon">
+                <i class="fa fa-laptop"></i>
+            </div>
+            <h3>Personal Website Launch</h3>
+            <p>Launched my personal website to showcase my projects and skills.</p>
+        </div>
+    </div>
+</section>
+
 
         <section id="contact">
             <h2>Contact Me</h2>
