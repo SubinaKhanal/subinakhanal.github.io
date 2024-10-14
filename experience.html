@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* CSS Styles */
         * {
@@ -128,9 +126,6 @@
             margin-left: 250px;
             padding: 20px;
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         section {
@@ -138,14 +133,14 @@
             margin: 10px auto;
             max-width: 800px;
             border-radius: 5px;
-            background: #fff; /* Add background color to sections */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             border-bottom: 2px solid #4B6EAF;
             margin-bottom: 10px;
-            padding-bottom: 5px; /* Add padding for spacing */
+            padding-bottom: 5px;
         }
 
         footer {
@@ -156,224 +151,66 @@
             width: 100%;
         }
 
-        #projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
-    grid-gap: 20px; /* Space between the cards */
-    justify-items: center; /* Centers the cards horizontally */
-    margin-top: 20px; /* Adds some space above the section */
-}
+        /* Card Styles for Projects and Little Wins Section */
+        .two-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 100%; /* Make the card take the full available width */
-    margin: 10px; /* Space between the cards */
-    text-align: center;
-    font-family: Arial;
-    border-radius: 5px;
-    background: #fff;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: 20px; /* Padding inside the card */
-}
-
-.card img {
-    width: 50px; /* Ensure consistent image size */
-    margin: 5px; /* Adds spacing between images */
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-        /* Card Styles for Education Section */
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: 10px; /* Reduced margin to fit cards side by side */
+            max-width: 100%;
+            margin: 10px;
             text-align: center;
             font-family: Arial;
-            border-radius: 5px; /* Added border-radius */
-            background: #fff; /* Background color for card */
-            overflow: hidden; /* Ensure the image doesn't overflow */
-            display: inline-block; /* Allow cards to be inline */
-            vertical-align: top; /* Align cards at the top */
-            transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling effect */
+            border-radius: 5px;
+            background: #fff;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
         }
 
         .card img {
-            width: 100%; /* Responsive image */
-            border-top-left-radius: 5px; /* Rounded top corners */
-            border-top-right-radius: 5px; /* Rounded top corners */
+            width: 50px;
+            margin: 5px;
         }
 
         .card:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .title {
-            color: grey;
-            font-size: 18px;
-        }
-
-        button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
+        /* Styles for Little Wins Section */
+        .little-win-card {
+            background: #F0F4F8;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            cursor: pointer;
+            transition: transform 0.3s;
             width: 100%;
-            font-size: 18px;
-            transition: background 0.3s;
+            max-width: 500px;
         }
 
-        button:hover {
-            background-color: #444; /* Darken button on hover */
+        .little-win-card:hover {
+            transform: scale(1.05);
         }
 
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: black;
+        .icon {
+            font-size: 40px;
+            color: #FF9F55;
+            margin-bottom: 10px;
         }
 
-        a:hover {
-            text-decoration: underline; /* Underline links on hover */
+        .little-win-card h3 {
+            margin: 10px 0;
+            color: #333;
         }
 
-        /* Timeline and Little Wins Section Styles */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: black;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-
-        .container {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 60%;
-        }
-
-        .container::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background-color: #E0F2F1;
-            border: 4px solid #FF9F55;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left {
-            left: -10%;
-        }
-
-        .right {
-            left: 50%;
-        }
-
-        .left::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            right: 30px;
-            border: medium solid #E0F2F1;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent #E0F2F1;
-        }
-
-        .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            left: 30px;
-            border: medium solid #E0F2F1;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent #E0F2F1 transparent transparent;
-        }
-
-        .right::after {
-            left: -16px;
-        }
-
-        /* Renamed the content class in the timeline */
-        .timeline-content {
-            padding: 15px 25px;
-            background-color: #E0F2F1;
-            position: relative;
-            border-radius: 6px;
-        }
-
-.little-wins-container {
-    display: flex;
-    flex-direction: column; /* Stack the cards vertically */
-    align-items: center; /* Center the cards horizontally */
-    gap: 20px; /* Space between each card */
-    margin-top: 20px; /* Space above the section */
-}
-
-.little-win-card {
-    background: #F0F4F8; /* Light background for cards */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Inner spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    text-align: center; /* Center text */
-    transition: transform 0.3s; /* Transition effect */
-    width: 100%; /* Full width */
-    max-width: 500px; /* Restrict the max width of the cards */
-}
-
-.little-win-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-}
-
-.icon {
-    font-size: 40px; /* Size of the icon */
-    color: #FF9F55; /* Icon color */
-    margin-bottom: 10px; /* Space below the icon */
-}
-
-.little-win-card h3 {
-    margin: 10px 0; /* Space above and below the title */
-    color: #333; /* Darker color for the title */
-}
-
-.little-win-card p {
-    color: #666; /* Slightly darker color for the description */
-}
-
-
-
-        /* Animation for Little Wins */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+        .little-win-card p {
+            color: #666;
         }
 
         /* Responsive Styles */
@@ -394,12 +231,8 @@
                 max-width: 100%;
             }
 
-            .timeline {
-                width: 100%;
-            }
-
-            .timeline-content {
-                padding: 10px;
+            .two-sections {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -428,37 +261,40 @@
                 display: block;
                 margin: 10px 0;
             }
-        }
-        .resumebtn {
-  background-color: #1976D2;;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top:10%;
-  width:250px;
-  color:white;
-  text-decoration:none;
-}
 
-.resumebtn:active {
-  transform: translateY(4px);
-}
+            .two-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .resumebtn {
+            background-color: #1976D2;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10%;
+            width: 250px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .resumebtn:active {
+            transform: translateY(4px);
+        }
     </style>
 </head>
 
 <body>
     <div class="side-nav">
-        <img src="sk.jpg" width="80%"  style="border-radius:50%;">
-        <h2 style="font-family:Segoe Script;"> Subina Khanal </h2> 
+        <img src="sk.jpg" width="80%" style="border-radius:50%;">
+        <h2 style="font-family:Segoe Script;"> Subina Khanal </h2>
         <p><i class="fas fa-angle-double-right"></i> AALBORG EAST, DENMARK </p>
         <p><i class="fas fa-angle-double-right"></i> subinakhanal [at] gmail [dot] com</p>
         <div class="social-media">
             <a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin" style="font-size:40px;color:#0099CC;"></i></a>
             <a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fa fa-google" style="font-size:40px;color:#4285F4;"></i></a>
-
         </div>
         <button class="resumebtn" type="submit" onclick="window.open('https://subinakhanal.github.io/Subina.pdf')"><i class="fa fa-download"></i> RESUME</button>
     </div>
@@ -467,9 +303,8 @@
         <nav class="horizontal-nav">
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experiences</a></li>
-                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#little-wins">Little Wins</a></li>
             </ul>
         </nav>
     </header>
@@ -477,86 +312,58 @@
     <div class="content">
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I am a passionate software developer with a keen interest in building innovative applications. 
-                My journey began in [Year/Context], and since then, I have been dedicated to enhancing my skills in 
-                various programming languages and technologies. I enjoy working on collaborative projects, and I love learning new 
-                technologies that help me grow as a developer. In my spare time, I also engage in [Hobbies/Interests], which helps 
-                me maintain a well-rounded approach to my work and life. My goal is to continuously improve and make meaningful contributions 
-                to the tech community. I believe in the power of technology to solve real-world problems and am excited about the possibilities that lie ahead.</p>
+            <p>I am Subina Khanal, a Test Engineer at Trackunit, Aalborg East, Denmark. I graduated in Computer Science
+                from Northumbria University, UK, and currently pursuing a Master’s in Control and Automation Engineering
+                from Aalborg University.</p>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="card">
-                 <h3><i class="fa fa-file-code"></i> Languages</h3>
-                <img src="java.png" style="width:50px;">
-                <img src="dot.png" style="width:50px;">
-                <img src="python.png" style="width:50px;">
-                <img src="php.png" style="width:55px;">
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-tools"></i> Tools</h3>
-                <img src="jira.png" style="width:50px;border-radius:50px;">
-                <img src="red.png" style="width:50px;border-radius:50px;">
-                <img src="testrail.png" style="width:50px;border-radius:50px;">
-            </div>
-            <div class="card">
-                <h3><i class="far fa-edit"></i> ML Frameworks</h3>
-                <img src="tensorflow.jfif" style="width:50px;border-radius:50px;">
-                <img src="keras.png" style="width:50px;border-radius:50px;">
-                <img src="pytorch.png" style="width:50px;border-radius:50px;">
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-wrench"></i> Web Tools</h3>
-                <img src="html.jfif" style="width:50px;border-radius:50px;">
-                <img src="css.jpg" style="width:60px;border-radius:50px;">
-                <img src="sql.jfif" style="width:50px;border-radius:50px;"> 
-            </div>
-        </section>
+        <div class="two-sections">
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="card">
+                    <h3><i class="fa fa-file-code"></i> Languages</h3>
+                    <img src="java.png" style="width:50px;">
+                    <img src="dot.png" style="width:50px;">
+                    <img src="python.png" style="width:50px;">
+                    <img src="php.png" style="width:55px;">
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <img src="jira.png" style="width:50px;border-radius:50px;">
+                    <img src="red.png" style="width:50px;border-radius:50px;">
+                    <img src="testrail.png" style="width:50px;border-radius:50px;">
+                </div>
+                <div class="card">
+                    <h3><i class="fa fa-book"></i> Courses</h3>
+                    <img src="stanford.png" style="width:50px;border-radius:50px;">
+                    <img src="uni.png" style="width:50px;border-radius:50px;">
+                </div>
+            </section>
 
-<section id="little-wins">
-    <h2>Little Wins</h2>
-    <div class="little-wins-container">
-        <!-- Best Paper Award -->
-        <div class="little-win-card">
-            <div class="icon">
-                <i class="fa fa-trophy"></i>
-            </div>
-            <h3>Best Paper Award</h3>
-            <p>Received the Best Paper Award at the XYZ Conference for outstanding research and innovation in ABC technology.</p>
+            <section id="little-wins">
+                <h2>Little Wins</h2>
+                <div class="little-wins-container">
+                    <div class="little-win-card">
+                        <div class="icon"><i class="fa fa-trophy"></i></div>
+                        <h3>Best Paper Award</h3>
+                        <p>Received the Best Paper Award at the XYZ Conference...</p>
+                    </div>
+                    <div class="little-win-card">
+                        <div class="icon"><i class="fa fa-star"></i></div>
+                        <h3>Excellent Star Award</h3>
+                        <p>Awarded the Excellent Star Award for exceptional performance...</p>
+                    </div>
+                    <div class="little-win-card">
+                        <div class="icon"><i class="fa fa-certificate"></i></div>
+                        <h3>Certificate of Merit</h3>
+                        <p>Recognized for outstanding contributions in the field of research...</p>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <!-- Excellent Star Award -->
-        <div class="little-win-card">
-            <div class="icon">
-                <i class="fa fa-star"></i>
-            </div>
-            <h3>Excellent Star Award</h3>
-            <p>Awarded the Excellent Star Award for exceptional performance and contribution in the DEF project at work.</p>
-        </div>
-
-        <!-- Rising Star Award -->
-        <div class="little-win-card">
-            <div class="icon">
-                <i class="fa fa-sun-o"></i>
-            </div>
-            <h3>Rising Star Award</h3>
-            <p>Honored with the Rising Star Award for demonstrating great potential and leadership in GHI initiatives.</p>
-        </div>
-
-        <!-- Academic Excellence -->
-        <div class="little-win-card">
-            <div class="icon">
-                <i class="fa fa-graduation-cap"></i>
-            </div>
-            <h3>Academic Excellence</h3>
-            <p>Recognized for Academic Excellence, maintaining top grades and high academic standards throughout my studies.</p>
-        </div>
-    </div>
-</section>
 
         <footer>
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p>&copy; 2024 Subina Khanal. All rights reserved.</p>
         </footer>
     </div>
 </body>
