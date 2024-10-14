@@ -139,7 +139,7 @@
             width: 100%;
         }
 
-	.about-container,.languages-tools-container {
+	.about-container, {
         display: flex;
         flex-direction: column; /* Ensure items stack vertically */
         gap: 20px; /* Space between items */
@@ -151,6 +151,47 @@
         border-radius: 5px; /* Optional rounded corners */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     }
+
+	    .languages-tools-container {
+    padding: 20px; /* Padding for overall container */
+    background-color: #f8f9fa; /* Light background color for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 40px; /* Space below the container */
+}
+
+.languages-tools-container h3 {
+    margin-bottom: 20px; /* Space below the section heading */
+    color: #007bff; /* Different color for the heading */
+}
+
+.languages-tools-container .card {
+    flex: 1 1 45%; /* Flex property to control size */
+    margin: 10px; /* Margin between cards */
+    padding: 15px; /* Padding inside the card */
+    background-color: #ffffff; /* Card background color */
+    border-radius: 5px; /* Rounded corners for cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Card shadow */
+    display: flex;
+    flex-direction: column; /* Align text vertically */
+}
+
+.languages-tools-container .card h4 {
+    margin-bottom: 10px; /* Space below card title */
+    color: #343a40; /* Darker color for card titles */
+}
+
+.languages-tools-container .card p {
+    color: #6c757d; /* Lighter color for card text */
+}
+
+/* Flexbox container to enable 2x2 grid */
+.languages-tools-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: space-between; /* Space between cards */
+}
+
 
         /* Card Styles for Education Section */
         .card {
