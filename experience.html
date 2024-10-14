@@ -63,6 +63,11 @@
             color: #fff;
             margin-right: 10px;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #B0D4E8;
         }
 
         .resume-btn {
@@ -74,6 +79,12 @@
             text-decoration: none;
             margin-top: 20px;
             text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .resume-btn:hover {
+            background: #4B6EAF;
+            color: #fff;
         }
 
         /* Top Navigation Bar */
@@ -124,11 +135,14 @@
             margin: 10px auto;
             max-width: 800px;
             border-radius: 5px;
+            background: #fff; /* Add background color to sections */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
         }
 
         h2 {
             border-bottom: 2px solid #4B6EAF;
             margin-bottom: 10px;
+            padding-bottom: 5px; /* Add padding for spacing */
         }
 
         footer {
@@ -151,12 +165,18 @@
             overflow: hidden; /* Ensure the image doesn't overflow */
             display: inline-block; /* Allow cards to be inline */
             vertical-align: top; /* Align cards at the top */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling effect */
         }
 
         .card img {
             width: 100%; /* Responsive image */
             border-top-left-radius: 5px; /* Rounded top corners */
             border-top-right-radius: 5px; /* Rounded top corners */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
         }
 
         .title {
@@ -175,6 +195,11 @@
             cursor: pointer;
             width: 100%;
             font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #444; /* Darken button on hover */
         }
 
         a {
@@ -183,9 +208,8 @@
             color: black;
         }
 
-        button:hover,
         a:hover {
-            opacity: 0.7;
+            text-decoration: underline; /* Underline links on hover */
         }
 
         /* Timeline and Little Wins Section Styles */
@@ -287,277 +311,165 @@
             border-radius: 25px; /* Updated for chip style */
             opacity: 0;
             transform: translateY(20px) scale(0.95);
-            animation: fadeInUp 0.5s forwards, bounceIn 0.7s ease-out forwards;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: inline-block; /* Added for inline display */
-            font-size: 16px; /* Font size for chip */
-            line-height: 50px; /* Line height for vertical centering */
+            animation: fadeInUp 0.5s forwards; /* Add animation */
         }
 
-        /* Staggering animation delay for each little win */
-        .little-win-item:nth-child(1) {
-            animation-delay: 0.3s;
-        }
-
-        .little-win-item:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .little-win-item:nth-child(3) {
-            animation-delay: 0.7s;
-        }
-
-        /* Hover effect to add interactivity */
-        .little-win-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-	/* Scroll to Top Arrow */
-        .scroll-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4B6EAF; /* Soft Blue */
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            display: none; /* Hidden by default */
-        }
-
-        /* Adding a bounce-in effect after the fade-in */
-        @keyframes bounceIn {
-            0% {
-                transform: scale(0);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
+        /* Animation for Little Wins */
         @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .side-nav {
+                width: 200px;
             }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
+            .content {
+                margin-left: 200px;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            .card {
+                max-width: 100%;
+            }
+
+            .timeline {
+                width: 100%;
+            }
+
+            .timeline-content {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .side-nav {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            header {
+                margin-left: 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .resume-btn {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            nav.horizontal-nav ul li {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Side Navigation Bar -->
     <div class="side-nav">
-        <img src="https://via.placeholder.com/100" alt="Profile Picture">
+        <img src="path/to/your/photo.jpg" alt="Your Name">
         <h2>Your Name</h2>
-        <p>Software Developer</p>
+        <p>Your Tagline or Short Description</p>
         <div class="social-media">
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fa fa-twitter"></i></a>
         </div>
-        <a href="resume.pdf" class="resume-btn">Download Resume</a>
+        <a href="path/to/your/resume.pdf" class="resume-btn" target="_blank">View Resume</a>
     </div>
 
-    <!-- Top Navigation Bar -->
     <header>
         <nav class="horizontal-nav">
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-           
-    <!-- Main Content -->
     <div class="content">
         <section id="about">
             <h2>About Me</h2>
-            <div class="about-container">
-                <div class="about-item">
-                    Hello! I am a passionate software developer with a keen interest in building innovative applications. My journey began in [Year/Context], and since then, I have been dedicated to enhancing my skills in various programming languages and technologies.
-                </div>
-                <div class="about-item">
-                    I enjoy working on collaborative projects, and I love learning new technologies that help me grow as a developer. In my spare time, I also engage in [Hobbies/Interests], which helps me maintain a well-rounded approach to my work and life.
-                </div>
-                <div class="about-item">
-                    My goal is to continuously improve and make meaningful contributions to the tech community. I believe in the power of technology to solve real-world problems and am excited about the possibilities that lie ahead.
-                </div>
-            </div>
-            <div class="about-container">
-                <div class="about-item">
-                    <h3>Languages & Tools</h3>
-                    <div class="card">
-                        <h4>Programming Languages</h4>
-                        <p>Java, PHP, Python, C++, JavaScript</p>
-                    </div>
-                    <div class="card">
-                        <h4>Web Tools</h4>
-                        <p>HTML, CSS, Bootstrap, React, Angular</p>
-                    </div>
-                    <div class="card">
-                        <h4>Machine Learning Frameworks</h4>
-                        <p>TensorFlow, Keras, Scikit-learn</p>
-                    </div>
-		   <div class="card">
-                        <h4>Web Tools</h4>
-                        <p>HTML, CSS, Bootstrap, React, Angular</p>
-                    </div>
-                </div>
+            <p>This is a short paragraph about yourself. You can write about your background, interests, and what you do.</p>
+        </section>
 
-                <div class="little-wins-container">
-                    <h3>Little Wins</h3>
-                    <div class="little-win-item">Completed an important task ahead of schedule!</div>
-                    <div class="little-win-item">Resolved a tricky bug in my code!</div>
-                    <div class="little-win-item">Received positive feedback from a mentor!</div>
-                </div>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="card">
+                <img src="path/to/project-image1.jpg" alt="Project Title">
+                <h3>Project Title 1</h3>
+                <p class="title">A short description of the project goes here.</p>
+                <button><a href="link/to/project1" target="_blank">View Project</a></button>
+            </div>
+            <div class="card">
+                <img src="path/to/project-image2.jpg" alt="Project Title">
+                <h3>Project Title 2</h3>
+                <p class="title">A short description of the project goes here.</p>
+                <button><a href="link/to/project2" target="_blank">View Project</a></button>
+            </div>
+            <div class="card">
+                <img src="path/to/project-image3.jpg" alt="Project Title">
+                <h3>Project Title 3</h3>
+                <p class="title">A short description of the project goes here.</p>
+                <button><a href="link/to/project3" target="_blank">View Project</a></button>
             </div>
         </section>
 
-        <!-- Education Section -->
         <section id="education">
             <h2>Education</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-                <div class="card">
-                    <center><img src="khu.png" style="width:70%"></center><br>
-                    <h3><b>Master's in Computer Science and Engineering</b></h3> <br>
-                     <p> 2020-2022 </p> <br>
-                     <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a><p><br>
-                     <p> Kyung Hee University (Global Campus), South Korea </p>
-                </div>
-                <div class="card">
-                    <center><img src="oic.png" style="width:100%"></center><br><br><br>
-                    <h3><b>Bachelor's degree of Information Management (BIM)</b></h3> <br>
-                      <p> 2012-2016 </p> <br>
-                      <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
-                      <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
-                     <p> Kathmandu, Nepal </p>
-                </div>
-            </div>
-        </section>
-
-           <section id="experience">
-            <h2>Experience</h2>
             <div class="timeline">
                 <div class="container left">
                     <div class="timeline-content">
-                        <h2>2022</h2>
-                        <p><a href="https://www.cs.aau.dk/" style="color:#4169e1;"><b>AALBORG UNIVERSITY</b></a></p>
-                        <p>Technical Faculty of IT and Design (Department of Computer Science)</p>
-	                    <dl>
-	                        <dt> Research Assistant (RA) </dt>
-	                        </dl>
+                        <h2>University Name</h2>
+                        <p>Bachelor's Degree in Computer Science</p>
+                        <p>2018 - 2022</p>
                     </div>
                 </div>
                 <div class="container right">
                     <div class="timeline-content">
-                        <h2>2020 - 2022</h2>
-                        <p><a href="http://icnslab.net/" style="color:#4169e1;"><b>ICNS LAB, KYUNG HEE UNIVERSITY</b></a></p>
-	                    <dl>
-	                        <dt> Graduate Researcher </dt>
-	                    <dd>o Applied Machine Learning</dd>
-	                </dl>
+                        <h2>High School Name</h2>
+                        <p>High School Diploma</p>
+                        <p>2014 - 2018</p>
                     </div>
                 </div>
-                <div class="container left">
-                    <div class="timeline-content">
-                        <h2> 2018 - 2019</h2>
-                      <p><a href="https://tekvortex.com/" style="color:#800000;"><b>Tekvortex Pvt. Ltd.</b></a></p>
-                         <p>Quality Assurance Engineer (QA) on a data archiving platform for Smarsh Inc.</p>
-	                    <dl>
-	                        <dt>Job Specification:</dt>
-		                         <dd> o Manual Testing</dd>
-		                         <dd>o Functional and Non-Functional Testing</dd>
-		                        <dd>o Integration Testing and System Testing</dd>
- 		                         <dd>o Issue Analysis and Replication: Regression Testing</dd>
-		                         <dd>o Managing Test Cases and Test Runs using TestRail</dd>
-		                         <dd>o Project Documentation and Communication</dd>
-	                    </dl>
-                    </div>
-                </div>
-        <div class="container right">
-            <div class="timeline-content">
-                        <h2>2017 - 2018</h2>
-                      <p><a href="https://www.linkedin.com/company/mdev-solutions" style="color:#800000;"><b>mDev Tech Solutions Pvt. Ltd.</b></a></p>
-                      <p>Junior Quality Assurance Engineer (QA)</p>
-                      <dl>
-	                    <dt>Job Specification:</dt>
-		                     <dd>o Manual Testing</dd>
-		                     <dd>o Functional Testing and Integration Testing</dd>
-		                     <dd>o Defect Tracking and System Testing</dd>
- 		                     <dd>o Web Application Testing</dd>
-		                     <dd>o API Testing</dd>
-		                     <dd>o Writing and Execution of Manual Test Cases</dd>
-		                    <dd>o Preparation of appropriate and accurate documentation at all levels of quality spectrum</dd><br>
- 	                     <dt>Projects:</dt>
-  		                    <dd>o ICA (International Center for Academic College of Distance Education \& Online Studies) website</dd>
-		                    <dd>o DPAY</dd>
-		                    <dd>o Easy Inventory Management</dd>
-		                    <dd>o MBM Gateway Project</dd>
-	                    </dl>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="timeline-content">
-                        <h2>April-May 2017</h2>
-                          <p><a href="https://www.linkedin.com/company/mdev-solutions" style="color:#2E8B57;"><b>mDev Tech Solutions Pvt. Ltd.</b></a></p>
-	                        <dl>
-	                            <dt> Intern </dt>
-	                                <dd>o  Quality Assurance Training</dd>
-	                            </dl>
-                    </div>
-                </div>
-                 <div class="container right">
-                    <div class="timeline-content">
-                        <h2>April-June 2016</h2>
-                       <p><a href="http://www.planetearthsolution.com/" style="color:#2E8B57;"><b>Planet Earth Solution Pvt. Ltd.</b></a></p>
-	                    <dl>
-	                        <dt> Intern </dt>
-	                            <dd>o  Web Development using .Net</dd>
-	                        </dl>
-                    </div>
-                </div>
+                <!-- Add more education items as needed -->
             </div>
         </section>
-    </div>
 
-        
+        <section id="little-wins">
+            <h2>Little Wins</h2>
+            <div class="little-wins-container">
+                <div class="little-win-item">Learned a new programming language!</div>
+                <div class="little-win-item">Completed an online course!</div>
+                <div class="little-win-item">Attended a tech conference!</div>
+                <div class="little-win-item">Contributed to an open-source project!</div>
+                <div class="little-win-item">Built a personal website!</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:yourname@example.com">yourname@example.com</a>.</p>
+        </section>
+
         <footer>
-            <p>&copy; 2024 Your Name</p>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
         </footer>
-
-          <!-- Scroll to Top Button -->
-    <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&#8679;</button>
-
-    <!-- JavaScript to show the scroll-top button -->
-    <script>
-        const scrollTopButton = document.querySelector('.scroll-top');
-
-        window.onscroll = () => {
-            if (window.scrollY > 300) {
-                scrollTopButton.style.display = 'block';
-            } else {
-                scrollTopButton.style.display = 'none';
-            }
-        };
-    </script>
     </div>
 </body>
 
