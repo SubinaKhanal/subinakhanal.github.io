@@ -284,6 +284,22 @@
         .resumebtn:active {
             transform: translateY(4px);
         }
+
+	    /* Scroll to Top Arrow */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4B6EAF; /* Soft Blue */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
     </style>
 </head>
 
@@ -383,6 +399,22 @@
         <footer>
             <p>&copy; 2024 Subina Khanal. All rights reserved.</p>
         </footer>
+
+	    <!-- Scroll to Top Button -->
+    <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&#8679;</button>
+
+    <!-- JavaScript to show the scroll-top button -->
+    <script>
+        const scrollTopButton = document.querySelector('.scroll-top');
+
+        window.onscroll = () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.style.display = 'block';
+            } else {
+                scrollTopButton.style.display = 'none';
+            }
+        };
+    </script>
     </div>
 </body>
 
