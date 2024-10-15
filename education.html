@@ -7,7 +7,8 @@
     <title>Subina Khanal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
         /* CSS Styles */
         * {
             margin: 0;
@@ -71,7 +72,7 @@
             color: #B0D4E8;
         }
 
-        .resumebtn {
+         .resumebtn {
             background-color: #2E3B4E;
             border: none;
             padding: 15px 32px;
@@ -88,7 +89,7 @@
             transform: translateY(4px);
         }
 
-        /* Scroll to Top Arrow */
+	    /* Scroll to Top Arrow */
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -103,7 +104,6 @@
             cursor: pointer;
             display: none; /* Hidden by default */
         }
-
         /* Top Navigation Bar */
         header {
             background: #2E3B4E;
@@ -142,10 +142,31 @@
             margin-left: 250px;
             padding: 20px;
             flex-grow: 1;
-            display: flex; /* Allow cards to be side by side */
-            justify-content: center; /* Center align cards */
-            flex-wrap: wrap; /* Wrap to next line on small screens */
         }
+
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 900px;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            border-bottom: 2px solid #4B6EAF;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2E3B4E;
+            color: white;
+            width: 100%;
+        }
+
 
         /* Card Styles for Education Section */
         .card {
@@ -175,43 +196,6 @@
 
         .card p {
             padding: 0 15px; /* Padding for card text */
-        }
-
-        button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 10px;
-            color: white;
-            background-color: #4B6EAF; /* Change to a soft blue */
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-            border-radius: 5px; /* Rounded button */
-        }
-
-        button:hover {
-            background-color: #2E3B4E; /* Darker shade on hover */
-        }
-
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: black;
-        }
-
-        button:hover,
-        a:hover {
-            opacity: 0.7;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #2E3B4E;
-            color: white;
-            width: 100%;
         }
 
         /* Responsive Styles */
@@ -284,17 +268,20 @@
     <div class="content">
         <!-- Education Cards -->
         <div class="card">
-            <h3>Bachelor's Degree in Computer Science</h3>
-            <p class="title">University of XYZ</p>
-            <p>Graduated: 2022</p>
-            <button onclick="alert('Details about the Bachelor's Degree')">More Info</button>
+            <center><img src="khu.png" style="width:70%"></center><br>
+                    <h3><b>Master's in Computer Science and Engineering</b></h3> <br>
+                     <p> 2020-2022 </p> <br>
+                     <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a><p><br>
+                     <p> Kyung Hee University (Global Campus), South Korea </p>
         </div>
 
         <div class="card">
-            <h3>Master's Degree in Data Science</h3>
-            <p class="title">University of ABC</p>
-            <p>Graduated: 2024</p>
-            <button onclick="alert('Details about the Master's Degree')">More Info</button>
+            <center><img src="oic.png" style="width:100%"></center><br><br><br>
+                    <h3><b>Bachelor's degree of Information Management (BIM)</b></h3> <br>
+                      <p> 2012-2016 </p> <br>
+                      <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
+                      <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
+                     <p> Kathmandu, Nepal </p>
         </div>
     </div>
 
