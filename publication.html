@@ -4,21 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications</title>
+    <title>Subina Khanal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background: #f9f9f9;
             color: #333;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Side Navigation Bar */
+        .side-nav {
+            width: 250px;
+            background: black;
+            color: #fff;
             padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .side-nav img {
+            width: 80%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .side-nav h2 {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .side-nav p {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .social-media {
+            margin: 10px 0;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #B0D4E8;
+        }
+        /* Top Navigation Bar */
+        header {
+            background: #2E3B4E;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-left: 250px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav.horizontal-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav.horizontal-nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav.horizontal-nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav.horizontal-nav a:hover {
+            color: #B0D4E8;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            margin-bottom: 20px;
             border-bottom: 2px solid #4B6EAF;
+            margin-bottom: 10px;
             padding-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2E3B4E;
+            color: white;
+            width: 100%;
+        }
+
+        .resumebtn {
+            background-color: #2E3B4E;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10%;
+            width: 250px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .resumebtn:active {
+            transform: translateY(4px);
+        }
+
+	    /* Scroll to Top Arrow */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4B6EAF; /* Soft Blue */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
         }
 
         .publication-list {
@@ -63,11 +209,86 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
+     /* Responsive Styles */
+        @media (max-width: 768px) {
+            .side-nav {
+                width: 200px;
+            }
+
+            .content {
+                margin-left: 200px;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            .card {
+                max-width: 100%;
+            }
+
+            .two-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .side-nav {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            header {
+                margin-left: 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .resumebtn {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            nav.horizontal-nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
     </style>
 </head>
 
 <body>
+    <div class="side-nav">
+        <img src="sk.jpg" width="100%" style="border-radius:50%;">
+        <h2 style="font-family:Segoe Script;"> Subina Khanal </h2>
+        <p><i class="fas fa-angle-double-right"></i> AALBORG EAST, DENMARK </p>
+        <p><i class="fas fa-angle-double-right"></i> subinakhanal [at] gmail [dot] com</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin-square" style="font-size:40px;color:#0099CC;"></i></a>
+            <a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fa fa-google" style="font-size:40px;color:#4285F4;"></i></a>
+        </div>
+        <button class="resumebtn" type="submit" onclick="window.open('https://subinakhanal.github.io/Subina.pdf')"><i class="fa fa-download"></i> RESUME</button>
+    </div>
+
+    <header>
+        <nav class="horizontal-nav">
+            <ul>
+		<li><a href="index.html"><i class="fa fa-fw fa-user"></i> About</a></li>
+  		<li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+ 		 <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
+  		<li><a href="#publications"><i class="fas fa-book-open"></i> Publications</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="content">
+        <section id="publications">
         <h2>Publications</h2>
 
         <!-- Optional Search Bar -->
@@ -96,6 +317,25 @@
             </li>
             <!-- Add more publications as needed -->
         </ul>
+  <footer>
+            <p>&copy; 2024 Subina Khanal. All rights reserved.</p>
+        </footer>
+
+	    <!-- Scroll to Top Button -->
+    <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&#8679;</button>
+
+    <!-- JavaScript to show the scroll-top button -->
+    <script>
+        const scrollTopButton = document.querySelector('.scroll-top');
+
+        window.onscroll = () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.style.display = 'block';
+            } else {
+                scrollTopButton.style.display = 'none';
+            }
+        };
+    </script>
     </div>
 </body>
 
