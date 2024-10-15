@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* CSS Styles */
+       /* CSS Styles */
         * {
             margin: 0;
             padding: 0;
@@ -29,7 +29,7 @@
         /* Side Navigation Bar */
         .side-nav {
             width: 250px;
-            background: #4B6EAF;
+            background: black;
             color: #fff;
             padding: 20px;
             height: 100vh;
@@ -65,19 +65,12 @@
             color: #fff;
             margin-right: 10px;
             text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .resume-btn {
-            display: inline-block;
-            background: #fff;
-            color: #4B6EAF;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-            text-align: center;
+        .social-media a:hover {
+            color: #B0D4E8;
         }
-
         /* Top Navigation Bar */
         header {
             background: #2E3B4E;
@@ -116,9 +109,6 @@
             margin-left: 250px;
             padding: 20px;
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         section {
@@ -126,11 +116,14 @@
             margin: 10px auto;
             max-width: 800px;
             border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             border-bottom: 2px solid #4B6EAF;
             margin-bottom: 10px;
+            padding-bottom: 5px;
         }
 
         footer {
@@ -231,6 +224,23 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+	.resumebtn {
+            background-color: #2E3B4E;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10%;
+            width: 250px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .resumebtn:active {
+            transform: translateY(4px);
         }
     </style>
 </head>
