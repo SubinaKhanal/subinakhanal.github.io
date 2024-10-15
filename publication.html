@@ -289,10 +289,8 @@
     <div class="content">
         <section id="publications">
             <h2>Publications</h2>
-
-            <!-- Optional Search Bar -->
             <div class="search-bar">
-                <input type="text" placeholder="Search publications..." />
+                <input type="text" id="searchInput" placeholder="Search publications..." onkeyup="filterPublications()" />
             </div>
 
             <ul class="publication-list">
@@ -344,6 +342,25 @@
                 scrollTopButton.style.display = 'none';
             }
         };
+
+        function filterPublications() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const publicationList = document.getElementById('publicationList');
+            const publications = publicationList.getElementsByTagName('li');
+
+            for (let i = 0; i < publications.length; i++) {
+                const title = publications[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                const authors = publications[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+                if (title.includes(filter) || authors.includes(filter)) {
+                    publications[i].style.display = '';
+                } else {
+                    publications[i].style.display = 'none';
+                }
+            }
+        }
+
     </script>
 </body>
 
