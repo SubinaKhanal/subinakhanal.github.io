@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <style>
+    <style>
         /* CSS Styles */
         * {
             margin: 0;
@@ -72,7 +72,7 @@
             color: #B0D4E8;
         }
 
-         .resumebtn {
+        .resumebtn {
             background-color: #2E3B4E;
             border: none;
             padding: 15px 32px;
@@ -89,7 +89,7 @@
             transform: translateY(4px);
         }
 
-	    /* Scroll to Top Arrow */
+        /* Scroll to Top Arrow */
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -104,6 +104,7 @@
             cursor: pointer;
             display: none; /* Hidden by default */
         }
+
         /* Top Navigation Bar */
         header {
             background: #2E3B4E;
@@ -181,81 +182,82 @@
                 padding: 10px;
             }
 
-        @media (max-width: 480px) {
-            .side-nav {
+            @media (max-width: 480px) {
+                .side-nav {
+                    width: 100%;
+                    position: relative;
+                    height: auto;
+                }
+
+                header {
+                    margin-left: 0;
+                }
+
+                .content {
+                    margin-left: 0;
+                    padding: 10px;
+                }
+
+                .resumebtn {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                nav.horizontal-nav ul li {
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+
+            /* Card Styles for Education Section */
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 300px;
+                margin: 10px; /* Reduced margin to fit cards side by side */
+                text-align: center;
+                font-family: Arial;
+                border-radius: 5px; /* Added border-radius */
+                background: #fff; /* Background color for card */
+                overflow: hidden; /* Ensure the image doesn't overflow */
+                flex: 1 1 calc(45% - 20px); /* Adjusted to allow two cards per row with space */
+                display: flex; /* Make card a flex container */
+                flex-direction: column; /* Stack content vertically */
+            }
+
+            .card img {
+                width: 100%; /* Responsive image */
+                border-top-left-radius: 5px; /* Rounded top corners */
+                border-top-right-radius: 5px; /* Rounded top corners */
+            }
+
+            .title {
+                color: grey;
+                font-size: 18px;
+            }
+
+            button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 8px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
                 width: 100%;
-                position: relative;
-                height: auto;
+                font-size: 18px;
             }
 
-            header {
-                margin-left: 0;
+            a {
+                text-decoration: none;
+                font-size: 22px;
+                color: black;
             }
 
-            .content {
-                margin-left: 0;
-                padding: 10px;
+            button:hover,
+            a:hover {
+                opacity: 0.7;
             }
-
-            .resumebtn {
-                margin-top: 10px;
-                width: 100%;
-            }
-
-            nav.horizontal-nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-        /* Card Styles for Education Section */
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: 10px; /* Reduced margin to fit cards side by side */
-            text-align: center;
-            font-family: Arial;
-            border-radius: 5px; /* Added border-radius */
-            background: #fff; /* Background color for card */
-            overflow: hidden; /* Ensure the image doesn't overflow */
-            display: inline-block; /* Allow cards to be inline */
-            vertical-align: top; /* Align cards at the top */
-        }
-
-        .card img {
-            width: 100%; /* Responsive image */
-            border-top-left-radius: 5px; /* Rounded top corners */
-            border-top-right-radius: 5px; /* Rounded top corners */
-        }
-
-        .title {
-            color: grey;
-            font-size: 18px;
-        }
-
-        button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-        }
-
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: black;
-        }
-
-        button:hover,
-        a:hover {
-            opacity: 0.7;
-        }
-	
     </style>
 </head>
 
@@ -275,10 +277,10 @@
     <header>
         <nav class="horizontal-nav">
             <ul>
-		<li><a href="index.html"><i class="fa fa-fw fa-user"></i> About</a></li>
-  		<li><a href="#education"><i class="fa fa-graduation-cap"></i> Education</a></li>
- 		 <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
-  		<li><a href="publication.html"><i class="fas fa-book-open"></i> Publications</a></li>
+                <li><a href="index.html"><i class="fa fa-fw fa-user"></i> About</a></li>
+                <li><a href="#education"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
+                <li><a href="publication.html"><i class="fas fa-book-open"></i> Publications</a></li>
             </ul>
         </nav>
     </header>
@@ -288,31 +290,30 @@
         <section id="education">
             <h2>Education</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <div class="card">
-        <center><img src="khu.png" style="width:70%"></center><br>
-        <h3><b>Master's in Computer Science and Engineering</b></h3><br>
-        <p>2020-2022</p><br>
-        <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a></p><br>
-        <p>Kyung Hee University (Global Campus), South Korea</p>
-    </div>
-    <div class="card">
-        <center><img src="oic.png" style="width:100%"></center><br><br><br>
-        <h3><b>Bachelor's degree of Information Management (BIM)</b></h3><br>
-        <p>2012-2016</p><br>
-        <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
-        <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
-        <p>Kathmandu, Nepal</p>
-    </div>
-</div>
-
+                <div class="card">
+                    <center><img src="khu.png" style="width:70%"></center><br>
+                    <h3><b>Master's in Computer Science and Engineering</b></h3><br>
+                    <p>2020-2022</p><br>
+                    <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a></p><br>
+                    <p>Kyung Hee University (Global Campus), South Korea</p>
+                </div>
+                <div class="card">
+                    <center><img src="oic.png" style="width:100%"></center><br><br><br>
+                    <h3><b>Bachelor's degree of Information Management (BIM)</b></h3><br>
+                    <p>2012-2016</p><br>
+                    <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
+                    <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
+                    <p>Kathmandu, Nepal</p>
+                </div>
+            </div>
         </section>
-        </div>
+    </div>
 
-        <footer>
-            <p>&copy; 2024 Subina Khanal. All rights reserved.</p>
-        </footer>
+    <footer>
+        <p>&copy; 2024 Subina Khanal. All rights reserved.</p>
+    </footer>
 
-	<!-- Scroll to Top Button -->
+    <!-- Scroll to Top Button -->
     <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&#8679;</button>
 
     <!-- JavaScript to show the scroll-top button -->
@@ -327,7 +328,6 @@
             }
         };
     </script>
-    </div>
 </body>
 
 </html>
