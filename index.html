@@ -1,412 +1,389 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {margin: 0; background-color:#f0f8ff;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.sidebar {
-  margin-left: 10px;
-  padding: 10px 25px;
-  width: 300px;
-  background-color:#E3F2FD;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
 
-div.contents {
-  margin-left: 400px;
-  padding: 1px 16px;
-  height: 100%;
-  overflow: auto;
-  background-color:#E3F2FD;
-}
+        /* Side Navigation Bar */
+        .side-nav {
+            width: 250px;
+            background: black;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
 
-@media screen and (max-width: 1000px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    margin: 0;
-  }
-  .sidebar button {float: left;}
-  .sidebar img {width: 50%;}
-  div.contents {margin: 0;height:auto;}
-}
+        .side-nav img {
+            width: 80%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
 
-@media screen and (max-width: 400px) {
-  .sidebar button {
-    text-align: center;
-    float: none;
-  }
-}
+        .side-nav h2 {
+            margin: 10px 0;
+            text-align: center;
+        }
 
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #1976D2;
-}
+        .side-nav p {
+            text-align: center;
+            margin: 10px 0;
+        }
 
-ul.topnav li {float: left;}
+        .social-media {
+            margin: 10px 0;
+        }
 
-ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  font-size:20px;
-  padding: 14px 36px;
-  text-decoration: none;
-}
+        .social-media a {
+            color: #fff;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-ul.topnav li.right {float: right;}
+        .social-media a:hover {
+            color: #B0D4E8;
+        }
 
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
+        .resume-btn {
+            display: inline-block;
+            background: #fff;
+            color: #4B6EAF;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
 
-.button {
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: transparent;
-}
+        .resume-btn:hover {
+            background: #4B6EAF;
+            color: #fff;
+        }
 
-.button:hover {
-  background-color: white;
-  border-color: white;
-}
+        /* Top Navigation Bar */
+        header {
+            background: #2E3B4E;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-left: 250px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-.resumebtn {
-  background-color: #1976D2;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top:40%;
-  width:250px;
-  color:white;
-  text-decoration:none;
-}
+        nav.horizontal-nav ul {
+            list-style: none;
+            padding: 0;
+        }
 
-.resumebtn:active {
-  transform: translateY(4px);
-}
+        nav.horizontal-nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-@media screen and (max-width: 1300px) {
-  .resumebtn {
-    margin-top:7%;
-  }
-}
+        nav.horizontal-nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 23%;
-  padding: 0 10px;	
-}
-	
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  padding-bottom:50px;
-}
+        nav.horizontal-nav a:hover {
+            color: #B0D4E8;
+        }
 
-/* Responsive columns */
-@media screen and (max-width: 1300px) {
-  .column {
-   width: 50%;
-    display: block;
-    margin-bottom: 10px;
-    margin-left:180px;
-    height:auto;
-  }
+        /* Main Content */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
 
-}
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-@media screen and (max-width: 700px) {
-  .column {
-    width: 90%;
-    display: block;
-    margin-bottom: 10px;
-    margin-left:20px;
-    height:auto;
-  }
-}
-	
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 1px;
-  text-align: center;
-  background-color:white;
-}
+        h2 {
+            border-bottom: 2px solid #4B6EAF;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
- 
-}
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2E3B4E;
+            color: white;
+            width: 100%;
+        }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 110px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 120%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
- 
-}
+        /* Card Styles for Projects and Little Wins Section */
+        .two-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            margin: 10px;
+            text-align: center;
+            font-family: Arial;
+            border-radius: 5px;
+            background: #fff;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+        }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
+        .card img {
+            width: 50px;
+            margin: 5px;
+        }
 
-.topbtn{
-   font-size:40px; 
-   float:right;
-   background-color:white;
-   width:50px;
-}
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-.topbtn:hover{
-   background-color:#1976D2;
-   border-color:#1976D2; 
-   color:white;
-}
+        /* Styles for Little Wins Section */
+        .little-win-card {
+            margin: 30px auto; /* Center align cards */
+            border-radius: 8px;
+            padding: 1px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 15px;
+        }
 
-.chip {
-  display: inline-block;
-  padding: 0px 25px;
-  height: 60px;
-  font-size: 20px;
-  line-height: 50px;
-  border-radius: 25px;
-  background-color:#f0f8ff;
-}
+        .little-win-card:hover {
+            transform: scale(1.05);
+        }
 
-  
-  @media screen and (max-width: 700px) {
-  .chip {
-    font-size:15px;
-    width:20%;
-  }
- }
+        .icon {
+            font-size: 20px; /* Reduced icon size */
+            color: #FF9F55;
+            margin-bottom: 5px; /* Reduced margin below icon */
+        }
 
-</style>
+        .little-win-card h3 {
+            margin: 1px 0;
+            color: #333;
+        }
+
+        .little-win-card p {
+            color: #666;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .side-nav {
+                width: 200px;
+            }
+
+            .content {
+                margin-left: 200px;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            .card {
+                max-width: 100%;
+            }
+
+            .two-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .side-nav {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            header {
+                margin-left: 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .resume-btn {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            nav.horizontal-nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .two-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .resumebtn {
+            background-color: #2E3B4E;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10%;
+            width: 250px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .resumebtn:active {
+            transform: translateY(4px);
+        }
+    </style>
 </head>
+
 <body>
+    <div class="side-nav">
+        <img src="sk.jpg" width="100%" style="border-radius:50%;">
+        <h2 style="font-family:Segoe Script;"> Subina Khanal </h2>
+        <p><i class="fas fa-angle-double-right"></i> AALBORG EAST, DENMARK </p>
+        <p><i class="fas fa-angle-double-right"></i> subinakhanal [at] gmail [dot] com</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin" style="font-size:40px;color:#0099CC;"></i></a>
+            <a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fa fa-google" style="font-size:40px;color:#4285F4;"></i></a>
+        </div>
+        <button class="resumebtn" type="submit" onclick="window.open('https://subinakhanal.github.io/Subina.pdf')"><i class="fa fa-download"></i> RESUME</button>
+    </div>
 
-<div class="sidebar">
-<img src="sk.jpg" width="80%"  style="border-radius:50%;">
-<h1 style="font-family:Segoe Script;"> Subina Khanal </h1> 
-<p><i class="fas fa-angle-double-right"></i> AALBORG EAST, DENMARK </p>
-<p><i class="fas fa-angle-double-right"></i> subinakhanal [at] gmail [dot] com</p>
+    <header>
+        <nav class="horizontal-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<br>
-<button class="button"><a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin-square" style="font-size:40px;color:#0099CC;"></i></a></button>
-<button class="button"><a href="https://www.facebook.com"><i class="fa fa-facebook-square" style="font-size:40px;color:blue;"></i></a></button>
-<button class="button"><a href="https://www.gmail.com"><i class="fa fa-envelope-square" style="font-size:40px;color:red;"></i></a></button>
-<button class="button"><a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fa fa-google" style="font-size:40px;color:#4285F4;"></i></a></button>
-
-<button class="resumebtn" type="submit" onclick="window.open('https://subinakhanal.github.io/Subina.pdf')"><i class="fa fa-download"></i> RESUME</button>
-</div>
-
-<div class="contents">
- <ul class="topnav">
-  <li><a href="#"><i class="fa fa-fw fa-user"></i> About</a></li>
-  <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
-  <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
-  <li><a href="publication.html"><i class="fas fa-book-open"></i> Publications</a></li>
-</ul>
-
-<p style="padding:20px;text-align: justify;"> I am a Research Assistant at the Department of Computer Science, Aalborg University, Denmark, working with Professor 
+    <div class="content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a Research Assistant at the Department of Computer Science, Aalborg University, Denmark, working with Professor 
 	<a href ="https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5&q=torben+bach+pedersen&oq=to" style="color:red;text-decoration:none;">Torben Bach Pedersen.</a> 
 			  My research area includes Domain Adaptation, Transfer Learning.
                           Previously I was a graduate researcher in the ICNS laboratory Kyung Hee University, South Korea, under the supervision of
 	                  Professor <a href ="https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5&q=Eui-nam+huh&btnG=&oq=e" style="color:red;text-decoration:none;">
 	Eui-Nam Huh. </a> For the past few years, I am working as a researcher in applied Machine Learning, with particular interests in 
-                           Proactive Content Caching, Edge Computing, and Federated Learning.
-<br><br>
-	Aside, I enjoy reading books, singing random songs, listening to wonderful music, dancing, and trying out new things; for 
-	now painting. Sometimes, I wander like the fireflies- tiny, but a meaningful creature, write half-done poems. Sometimes, I dive
-         into the trivial mathematical proofs, curious about how things
-	 work, I play around with the concepts, and try my best not to
-	explain myself-in an unconventional way. At least, I feel like
-	that! I celebrate life- calm and simple- and, define myself 
-	with a single success, or a single failure. I enjoy little things in life, and find myself comfortable when closer to nature. I value human behavior, kindness, empathy, compassion, gratitude above anything. 
-	I also firmly believe in equal opportunity to access resources and making decision for both man and woman.
-	
-</p>  
+                           Proactive Content Caching, Edge Computing, and Federated Learning.</p>
+        </section>
 
-<br>
-<hr style="border-top: 1px dotted black;">
+        <div class="two-sections">
+            <section id="projects">
+                <h2>Worked On</h2>
+                <div class="card">
+                    <h3><i class="fa fa-file-code"></i> Languages</h3>
+                    <img src="java.png" style="width:50px;">
+                    <img src="dot.png" style="width:50px;">
+                    <img src="python.png" style="width:50px;">
+                    <img src="php.png" style="width:55px;">
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <img src="jira.png" style="width:50px;border-radius:50px;">
+                    <img src="red.png" style="width:50px;border-radius:50px;">
+                    <img src="testrail.png" style="width:50px;border-radius:50px;">
+                </div>
+                <div class="card">
+                    <h3><i class="far fa-edit"></i> ML Frameworks</h3>
+                    <img src="tensorflow.jfif" style="width:50px;border-radius:50px;">
+                    <img src="keras.png" style="width:50px;border-radius:50px;">
+                    <img src="pytorch.png" style="width:50px;border-radius:50px;">
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-wrench"></i> Web Tools</h3>
+                    <img src="html.jfif" style="width:50px;border-radius:50px;">
+                    <img src="css.jpg" style="width:60px;border-radius:50px;">
+                   <img src="sql.jfif" style="width:50px;border-radius:50px;">
+                </div>
+            </section>
 
-<center><h3 style="font-family:Gabriola;font-size:40px;"> Worked on </h3></center> 
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <h3 style="background-color:#0097A7;color:white;font-size:25px;height:30px;padding:9px;"><i class="fa fa-file-code"></i> Languages</h3>
-      <div class="tooltip">
-	<img src="java.png" style="width:50px;">
-       <span class="tooltiptext">JAVA</span>
-   </div>
-  <div class="tooltip">
-	<img src="dot.png" style="width:50px;">
-         <span class="tooltiptext">.NET</span>
-  </div>
-  <div class="tooltip">
-	<img src="python.png" style="width:50px;">
-        <span class="tooltiptext">PYTHON</span>
-  </div>
-   <div class="tooltip">
-	<img src="php.png" style="width:55px;">
-        <span class="tooltiptext">PHP</span>
-   </div>
+            <section id="little-wins">
+                <h2>Little Wins</h2>
+                <div class="little-wins-container">
+                    <div class="little-win-card">
+                        <div class="icon"><i class="fa fa-trophy"></i></div>
+                        <h3>Best Paper Award</h3>
+                        <p>ICUFN Conference 2021.</p>
+                    </div>
+                    <div class="little-win-card">
+                        <div class="icon"><i class="fa fa-trophy"></i></div>
+                        <h3>Excellent Paper Award</h3>
+                        <p>KIISE conference 2021.</p>
+                    </div>
+                    <div class="little-win-card">
+                        <div class="icon"><i class="fa fa-star"></i></div>
+                        <h3>Rising Star Award</h3>
+                        <p>Outstanding performance at Tekvortex Pvt.Ltd.</p>
+                    </div>
+                    <div class="little-win-card">
+                        <div class="icon"><i class="fa fa-certificate"></i></div>
+                        <h3>Certificate of Merit</h3>
+                        <p>Secured first rank in the universty.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Subina Khanal. All rights reserved.</p>
+        </footer>
     </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <h3 style="background-color:#0097A7;color: white;font-size: 25px;height:30px;padding:10px;"><i class="fas fa-tools"></i> Tools</h3>
-      <div class="tooltip">
-        <img src="jira.png" style="width:50px;border-radius:50px;">
-	 <span class="tooltiptext">JIRA</span>
-  </div>
- <div class="tooltip">
-	<img src="red.png" style="width:50px;border-radius:50px;">
-	 <span class="tooltiptext">RED MINE</span>
-  </div>
- <div class="tooltip">
-	<img src="testrail.png" style="width:50px;border-radius:50px;">
- 	<span class="tooltiptext">TESTRAIL</span>
-  </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3 style="background-color:#0097A7;color: white;font-size: 25px;height:30px;padding:10px;"><i class="far fa-edit"></i> ML Frameworks</h3>
-      <div class="tooltip">
-        <img src="tensorflow.jfif" style="width:50px;border-radius:50px;">
-	 <span class="tooltiptext">TENSORFLOW</span>
-  </div>
- <div class="tooltip">
-	<img src="keras.png" style="width:50px;border-radius:50px;">
- 	<span class="tooltiptext">KERAS</span>
-  </div>
-<div class="tooltip">
-	<img src="pytorch.png" style="width:50px;border-radius:50px;">
- 	<span class="tooltiptext">PYTORCH</span>
-  </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3 style="background-color:#0097A7;color:white;font-size: 25px;height:30px;padding:10px;"><i class="fas fa-wrench"></i> Web Tools</h3>
-      <div class="tooltip">
-     <img src="html.jfif" style="width:50px;border-radius:50px;">
-     <span class="tooltiptext">HTML</span>
-  </div>
- <div class="tooltip">
-     <img src="css.jpg" style="width:60px;border-radius:50px;">
-    <span class="tooltiptext">CSS</span>
-  </div>
- <div class="tooltip">
-     <img src="sql.jfif" style="width:50px;border-radius:50px;">
-     <span class="tooltiptext">SQL</span>
-  </div>
-    </div>
-  </div>
-</div>
-
-<br>
-<hr style="border-top: 1px dotted black;">
-
-<center><h3 style="font-family:Gabriola;font-size:40px;"> Little Wins </h3> </center>
-
-<div class="row">
-<div class="column">
-<div class="chip" style="background-color:#82CAAF;width:65%">
-  BEST PAPER AWARD
-  <li style="font-family:Palatino;list-style-type: circle;">ICUFN 2021</li>
-</div>
-</div>
-
-<div class="column">
-<div class="chip" style="background-color:#EF9A9A;width:77%">
-EXCELLENT STAR AWARD
-<li style="font-family:Palatino;list-style-type: circle;">KIISE 2021</li>
-</div>
-</div>
-<div class="column">
-<div class="chip" style="background-color:#FECF6A;width:70%">
-  RISING STAR AWARD
-   <li style="font-family:Palatino;list-style-type: circle;">Tekvortex Pvt.Ltd. 2020</li>
-</div>
-</div>
-<div class="column">
-<div class="chip" style="background-color:#75C0E0;width:90%">
-  ACADEMIC EXCELLENCE
-  <li style="font-family:Palatino;list-style-type: circle;">Secured first rank in the university</li>
-</div>
-</div>
-</div>
-
-
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="topbtn"><i class='fas fa-angle-double-up'></i></button>
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-
-</div>
 </body>
+
 </html>
