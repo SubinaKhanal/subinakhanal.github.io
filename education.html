@@ -208,54 +208,55 @@
                 }
             }
 
-            /* Card Styles for Education Section */
-            .card {
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                margin: 10px; /* Margin around the card */
-                text-align: center;
-                font-family: Arial;
-                border-radius: 5px; /* Added border-radius */
-                background: #fff; /* Background color for card */
-                overflow: hidden; /* Ensure the image doesn't overflow */
-                flex: 1 1 45%; /* Flex property to ensure two cards side by side */
-                display: flex; /* Make card a flex container */
-                flex-direction: column; /* Stack content vertically */
-            }
+           /* Card Styles for Education Section */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 10px; /* Reduced margin to fit cards side by side */
+            text-align: center;
+            font-family: Arial;
+            border-radius: 5px; /* Added border-radius */
+            background: #fff; /* Background color for card */
+            overflow: hidden; /* Ensure the image doesn't overflow */
+            display: inline-block; /* Allow cards to be inline */
+            vertical-align: top; /* Align cards at the top */
+        }
 
-            .card img {
-                width: 100%; /* Responsive image */
-                border-top-left-radius: 5px; /* Rounded top corners */
-                border-top-right-radius: 5px; /* Rounded top corners */
-            }
+        .card img {
+            width: 100%; /* Responsive image */
+            border-top-left-radius: 5px; /* Rounded top corners */
+            border-top-right-radius: 5px; /* Rounded top corners */
+        }
 
-            .title {
-                color: grey;
-                font-size: 18px;
-            }
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
 
-            button {
-                border: none;
-                outline: 0;
-                display: inline-block;
-                padding: 8px;
-                color: white;
-                background-color: #000;
-                text-align: center;
-                cursor: pointer;
-                width: 100%;
-                font-size: 18px;
-            }
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
 
-            a {
-                text-decoration: none;
-                font-size: 22px;
-                color: black;
-            }
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
 
-            button:hover,
-            a:hover {
-                opacity: 0.7;
-            }
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
     </style>
 </head>
 
@@ -284,27 +285,28 @@
     </header>
 
     <div class="content">
-        <!-- Education Section -->
+       <!-- Education Section -->
         <section id="education">
             <h2>Education</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
                 <div class="card">
-                    <center><img src="khu.png"></center><br>
-                    <h3><b>Master's in Computer Science and Engineering</b></h3><br>
-                    <p>2020-2022</p><br>
-                    <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a></p><br>
-                    <p>Kyung Hee University (Global Campus), South Korea</p>
+                    <center><img src="khu.png" style="width:70%"></center><br>
+                    <h3><b>Master's in Computer Science and Engineering</b></h3> <br>
+                     <p> 2020-2022 </p> <br>
+                     <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a><p><br>
+                     <p> Kyung Hee University (Global Campus), South Korea </p>
                 </div>
                 <div class="card">
-                    <center><img src="oic.png"></center><br>
-                    <h3><b>Bachelor's degree of Information Management (BIM)</b></h3><br>
-                    <p>2012-2016</p><br>
-                    <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
-                    <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
-                    <p>Kathmandu, Nepal</p>
+                    <center><img src="oic.png" style="width:100%"></center><br><br><br>
+                    <h3><b>Bachelor's degree of Information Management (BIM)</b></h3> <br>
+                      <p> 2012-2016 </p> <br>
+                      <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
+                      <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
+                     <p> Kathmandu, Nepal </p>
                 </div>
             </div>
         </section>
+
     </div>
 
     <footer>
