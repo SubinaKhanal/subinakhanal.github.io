@@ -172,11 +172,13 @@
         .card {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 300px; /* Set a max width for cards */
-            margin: 20px; /* Margin between cards */
+            margin: 5px; /* Margin between cards */
             text-align: center;
             border-radius: 10px; /* Rounded corners */
             background: #fff; /* Background color for card */
             transition: transform 0.3s; /* Smooth transition */
+	    overflow: hidden; /* Ensure the image doesn't overflow */
+            display: inline-block;
         }
 
         .card:hover {
@@ -267,6 +269,7 @@
 
     <div class="content">
 <section id="education">
+	<h2>Education</h2>
         <!-- Education Cards -->
         <div class="card">
             <center><img src="khu.png" style="width:70%"></center><br>
