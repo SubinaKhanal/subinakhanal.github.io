@@ -167,7 +167,6 @@
             width: 100%;
         }
 
-
         /* Card Styles for Education Section */
         .card {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -198,6 +197,34 @@
 
         .card p {
             padding: 0 15px; /* Padding for card text */
+        }
+
+	       /* Project List Styles */
+        .project-list {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            width: 100%; /* Full width for list */
+        }
+
+        .project-list li {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center align items vertically */
+            margin: 15px 0; /* Space between list items */
+            padding: 15px; /* Padding for each list item */
+            border-left: 5px solid #4B6EAF; /* Left border to highlight */
+            background: #f9f9f9; /* Light background */
+            transition: background 0.3s; /* Transition effect */
+        }
+
+        .project-list li:hover {
+            background: #E8F3FA; /* Highlight color on hover */
+        }
+
+        .project-list i {
+            font-size: 24px; /* Icon size */
+            margin-right: 15px; /* Space between icon and text */
+            color: #4B6EAF; /* Icon color */
         }
 
         /* Responsive Styles */
@@ -289,6 +316,29 @@
 
 	<section id="projects">
 		<h2>Academic Projects</h2>
+		<ul class="project-list">
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    <div>
+                        <strong>Project Title 1</strong>
+                        <p>Description of project 1. <em>Technologies Used:</em> HTML, CSS, JavaScript</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    <div>
+                        <strong>Project Title 2</strong>
+                        <p>Description of project 2. <em>Technologies Used:</em> Python, Flask</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    <div>
+                        <strong>Project Title 3</strong>
+                        <p>Description of project 3. <em>Technologies Used:</em> Java, Spring Boot</p>
+                    </div>
+                </li>
+            </ul>
 	</section>    
     </div>
 
