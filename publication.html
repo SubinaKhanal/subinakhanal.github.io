@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <style>
+    <style>
         /* CSS Styles */
         * {
             margin: 0;
@@ -150,7 +150,7 @@
             transform: translateY(4px);
         }
 
-	    /* Scroll to Top Arrow */
+        /* Scroll to Top Arrow */
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -209,7 +209,7 @@
             border-radius: 5px;
         }
 
-     /* Responsive Styles */
+        /* Responsive Styles */
         @media (max-width: 768px) {
             .side-nav {
                 width: 200px;
@@ -278,48 +278,59 @@
     <header>
         <nav class="horizontal-nav">
             <ul>
-		<li><a href="index.html"><i class="fa fa-fw fa-user"></i> About</a></li>
-  		<li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
- 		 <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
-  		<li><a href="#publications"><i class="fas fa-book-open"></i> Publications</a></li>
+                <li><a href="index.html"><i class="fa fa-fw fa-user"></i> About</a></li>
+                <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="experience.html"><i class="fas fa-laptop"></i> Experience</a></li>
+                <li><a href="#publications"><i class="fas fa-book-open"></i> Publications</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="content">
         <section id="publications">
-        <h2>Publications</h2>
+            <h2>Publications</h2>
 
-        <!-- Optional Search Bar -->
-        <div class="search-bar">
-            <input type="text" placeholder="Search publications..." />
-        </div>
+            <!-- Optional Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search publications..." />
+            </div>
 
-        <ul class="publication-list">
-            <li class="publication">
-                <h3><a href="link-to-publication1.pdf" target="_blank">Title of Publication 1</a></h3>
-                <p><strong>Authors:</strong> Author 1, Author 2</p>
-                <p><strong>Journal:</strong> Journal Name, <strong>Date:</strong> January 2024</p>
-                <p><strong>Description:</strong> Brief summary of what the publication is about.</p>
-            </li>
-            <li class="publication">
-                <h3><a href="link-to-publication2.pdf" target="_blank">Title of Publication 2</a></h3>
-                <p><strong>Authors:</strong> Author 1, Author 3</p>
-                <p><strong>Conference:</strong> Conference Name, <strong>Date:</strong> February 2023</p>
-                <p><strong>Description:</strong> Brief summary of what the publication is about.</p>
-            </li>
-            <li class="publication">
-                <h3><a href="link-to-publication3.pdf" target="_blank">Title of Publication 3</a></h3>
-                <p><strong>Authors:</strong> Author 2, Author 4</p>
-                <p><strong>Journal:</strong> Journal Name, <strong>Date:</strong> March 2022</p>
-                <p><strong>Description:</strong> Brief summary of what the publication is about.</p>
-            </li>
-            <!-- Add more publications as needed -->
-        </ul>
-	</section>
+            <ul class="publication-list">
+                <li class="publication">
+                    <h3><a href="link-to-publication1.pdf" target="_blank">Toxicology in vitro as a preclinical tool for evaluating drug safety and efficacy</a></h3>
+                    <p><strong>Authors:</strong> Subina Khanal, Author 2, Author 3</p>
+                    <p><strong>Journal:</strong> Journal of Pharmaceutical Sciences, <strong>Date:</strong> September 2023</p>
+                    <p><strong>Description:</strong> This publication discusses the use of toxicology in vitro as a method for evaluating drug safety and efficacy.</p>
+                </li>
+                <li class="publication">
+                    <h3><a href="link-to-publication2.pdf" target="_blank">Evaluation of the anti-inflammatory properties of herbal extracts</a></h3>
+                    <p><strong>Authors:</strong> Subina Khanal, Author 4</p>
+                    <p><strong>Conference:</strong> International Conference on Herbal Medicine, <strong>Date:</strong> August 2023</p>
+                    <p><strong>Description:</strong> The paper presents findings on the anti-inflammatory properties of various herbal extracts.</p>
+                </li>
+                <li class="publication">
+                    <h3><a href="link-to-publication3.pdf" target="_blank">Advancements in Drug Delivery Systems</a></h3>
+                    <p><strong>Authors:</strong> Subina Khanal, Author 5, Author 6</p>
+                    <p><strong>Journal:</strong> Advanced Drug Delivery Reviews, <strong>Date:</strong> July 2022</p>
+                    <p><strong>Description:</strong> This review highlights recent advancements in drug delivery systems and their applications.</p>
+                </li>
+                <li class="publication">
+                    <h3><a href="link-to-publication4.pdf" target="_blank">Nanotechnology in Cancer Treatment</a></h3>
+                    <p><strong>Authors:</strong> Subina Khanal, Author 7</p>
+                    <p><strong>Journal:</strong> Cancer Nanotechnology, <strong>Date:</strong> June 2022</p>
+                    <p><strong>Description:</strong> A study on the role of nanotechnology in improving cancer treatment outcomes.</p>
+                </li>
+                <li class="publication">
+                    <h3><a href="link-to-publication5.pdf" target="_blank">The role of antioxidants in human health</a></h3>
+                    <p><strong>Authors:</strong> Subina Khanal, Author 8</p>
+                    <p><strong>Journal:</strong> Nutritional Research Reviews, <strong>Date:</strong> May 2021</p>
+                    <p><strong>Description:</strong> This article explores the significance of antioxidants in maintaining human health.</p>
+                </li>
+            </ul>
+        </section>
     </div>
 
-	    <!-- Scroll to Top Button -->
+    <!-- Scroll to Top Button -->
     <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&#8679;</button>
 
     <!-- JavaScript to show the scroll-top button -->
@@ -334,7 +345,6 @@
             }
         };
     </script>
-    </div>
 </body>
 
 </html>
