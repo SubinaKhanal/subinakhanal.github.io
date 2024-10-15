@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Subina Khanal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <style>
@@ -71,23 +71,38 @@
             color: #B0D4E8;
         }
 
-        .resume-btn {
-            display: inline-block;
-            background: #fff;
-            color: #4B6EAF;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
+         .resumebtn {
+            background-color: #2E3B4E;
+            border: none;
+            padding: 15px 32px;
             text-align: center;
-            transition: background 0.3s, color 0.3s;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10%;
+            width: 250px;
+            color: white;
+            text-decoration: none;
         }
 
-        .resume-btn:hover {
-            background: #4B6EAF;
-            color: #fff;
+        .resumebtn:active {
+            transform: translateY(4px);
         }
 
+	    /* Scroll to Top Arrow */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4B6EAF; /* Soft Blue */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
         /* Top Navigation Bar */
         header {
             background: #2E3B4E;
@@ -266,7 +281,7 @@
                 padding: 10px;
             }
 
-            .resume-btn {
+            .resumebtn {
                 margin-top: 10px;
                 width: 100%;
             }
@@ -279,22 +294,6 @@
             .two-sections {
                 grid-template-columns: 1fr;
             }
-        }
-
-/* Scroll to Top Arrow */
-        .scroll-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4B6EAF; /* Soft Blue */
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            display: none; /* Hidden by default */
         }
     </style>
 </head>
@@ -309,7 +308,7 @@
             <a href="https://www.linkedin.com/in/subinakhanal/"><i class="fa fa-linkedin" style="font-size:40px;color:#0099CC;"></i></a>
             <a href="https://scholar.google.com/citations?user=HWH8Lr0AAAAJ&hl=da&oi=ao"><i class="fa fa-google" style="font-size:40px;color:#4285F4;"></i></a>
         </div>
-        <button class="resume-btn" type="submit" onclick="window.open('https://subinakhanal.github.io/Subina.pdf')"><i class="fa fa-download"></i> RESUME</button>
+        <button class="resumebtn" type="submit" onclick="window.open('https://subinakhanal.github.io/Subina.pdf')"><i class="fa fa-download"></i> RESUME</button>
     </div>
 
     <header>
