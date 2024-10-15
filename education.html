@@ -167,91 +167,6 @@
             width: 100%;
         }
 
-	/* Timeline */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: black;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-
-        .container {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 55%;
-        }
-
-        .container::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background-color: white;
-            border: 4px solid black;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left {
-            left: -5%;
-        }
-
-        .right {
-            left: 50%;
-        }
-
-        .left::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            right: 30px;
-            border: medium solid #F5F7F8;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent #F5F7F8;
-        }
-
-        .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            left: 30px;
-            border: medium solid #F5F7F8;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent #F5F7F8 transparent transparent;
-        }
-
-        .right::after {
-            left: -16px;
-        }
-
-        /* Renamed the content class in the timeline */
-        .timeline-content {
-            padding: 15px 25px;
-            background-color: #F5F7F8;
-            position: relative;
-            border-radius: 6px;
-        }
-
-
         /* Responsive Styles */
         @media (max-width: 768px) {
             .side-nav {
@@ -359,22 +274,23 @@
         <section id="education">
             <h2>Education</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-                <div class="card">
-                    <center><img src="khu.png" style="width:70%"></center><br>
-                    <h3><b>Master's in Computer Science and Engineering</b></h3> <br>
-                     <p> 2020-2022 </p> <br>
-                     <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a><p><br>
-                     <p> Kyung Hee University (Global Campus), South Korea </p>
-                </div>
-                <div class="card">
-                    <center><img src="oic.png" style="width:100%"></center><br><br><br>
-                    <h3><b>Bachelor's degree of Information Management (BIM)</b></h3> <br>
-                      <p> 2012-2016 </p> <br>
-                      <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
-                      <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
-                     <p> Kathmandu, Nepal </p>
-                </div>
-            </div>
+    <div class="card">
+        <center><img src="khu.png" style="width:70%"></center><br>
+        <h3><b>Master's in Computer Science and Engineering</b></h3><br>
+        <p>2020-2022</p><br>
+        <p><a href="http://icnslab.net/" style="color:black;">Intelligent Computing and Security (ICNS) Lab</a></p><br>
+        <p>Kyung Hee University (Global Campus), South Korea</p>
+    </div>
+    <div class="card">
+        <center><img src="oic.png" style="width:100%"></center><br><br><br>
+        <h3><b>Bachelor's degree of Information Management (BIM)</b></h3><br>
+        <p>2012-2016</p><br>
+        <p><a href="https://www.oic.edu.np/" style="color:black;">Orchid International College</a></p><br>
+        <p><a href="https://www.tribhuvan-university.edu.np/" style="color:black;">Tribhuvan University</a></p><br>
+        <p>Kathmandu, Nepal</p>
+    </div>
+</div>
+
         </section>
         </div>
 
