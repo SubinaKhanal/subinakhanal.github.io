@@ -353,10 +353,11 @@
                 const title = publications[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
                 const authors = publications[i].getElementsByTagName('p')[0].innerText.toLowerCase();
 
+                // Check if the title or authors match the filter
                 if (title.includes(filter) || authors.includes(filter)) {
-                    publications[i].style.display = '';
+                    publications[i].style.display = ''; // Show matching item
                 } else {
-                    publications[i].style.display = 'none';
+                    publications[i].style.display = 'none'; // Hide non-matching item
                 }
             }
         }
